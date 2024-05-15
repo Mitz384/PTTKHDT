@@ -40,3 +40,46 @@ $('.card').click(function(){
   window.location.href = "./detail/detail.html";
 })
 
+let quantityInput = document.querySelector('.input-quantity');
+let quantityShow = document.querySelector('.quantity-show');
+// Tăng số lượng 
+document.querySelector('.increase-btn').addEventListener('click', ()=>{
+  let currentValue = parseInt(quantityInput.value);
+  quantityInput.value = currentValue + 1;
+});
+// Giảm số lượng
+document.querySelector('.decrease-btn').addEventListener('click', ()=>{
+  let currentValue = parseInt(quantityInput.value);
+  if(currentValue > 1){
+    quantityInput.value = currentValue - 1;
+  }
+});
+
+
+
+// Hàm tính thành tiền
+$(document).ready(function() {
+  $('#select-prod, .input-quantity').change(function(){
+      calcTotalPrice();
+  });
+  $('.increase-btn, .decrease-btn').click(function(){
+    calcTotalPrice();
+});
+});
+
+function calcTotalPrice(){
+  $('.total-price').empty();
+  if($('#select-prod').is(":checked")){
+  let quantity = document.querySelector('.input-quantity');
+  quantity = parseInt(quantity.value);
+  let price = document.querySelector(".prod-price").textContent;
+  price.slice(0, -1);
+  price = price.replace(/\./g, '');
+  price = parseInt(price);
+  let totalPrice = quantity * price;  
+  totalPrice = totalPrice.toLocaleString('de-DE');
+  $('.total-price').append(
+    $(`<p class="prod-price text-primary m-0">Tổng thành tiền: <span class="fw-medium">${totalPrice}</span><span class="fs-10px fw-medium text-decoration-underline" style="vertical-align: super;">đ</span></p>`)
+  )
+  }
+}

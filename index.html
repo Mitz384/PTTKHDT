@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link href="./css/main.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./detail/detail.css">
 </head>
 <body>
   <div class="d-flex flex-column gap-5">
@@ -79,7 +80,7 @@
             </li>
             <!-- Giỏ hàng -->
             <li class="nav-item">
-              <a class="nav-link text-white text-center d-none d-lg-block" href="#">
+              <a class="nav-link text-white text-center d-none d-lg-block" data-bs-toggle="modal" data-bs-target="#cartModal" href="#">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_65_55)">
                 <path d="M20.88 12.8571H6.85714L5.14285 4.28571H22.2857C22.4111 4.28617 22.5348 4.31412 22.6482 4.3676C22.7616 4.42107 22.8619 4.49877 22.942 4.59521C23.0221 4.69166 23.08 4.80449 23.1118 4.92577C23.1435 5.04705 23.1483 5.17382 23.1257 5.29713L21.72 12.1543C21.6872 12.3525 21.5844 12.5325 21.4303 12.6614C21.2762 12.7904 21.0809 12.8598 20.88 12.8571V12.8571Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -451,7 +452,54 @@
       
     </div>
   </div>
-
+  <!-- Giỏ hàng -->
+  <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModal" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Giỏ hàng</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <!-- Sản phẩm cần chọn -->
+        <div class="modal-body d-flex">
+          <input type="checkbox" name="" id="select-prod">
+          <label for="select-prod">
+            <div class="container">
+              <div class="row">
+                <div class="col-4">
+                  <img src="./image/Product_man_1/Product_man_1_1.png" alt="" class="rounded overflow-hidden"  style="max-width: 100%; height: auto;">
+                </div>
+                <div class="col-8 pe-0 d-flex flex-column gap-3">
+                  <div class="selected-info d-flex flex-column gap-2">
+                    <p class="fs-14px m-0">Áo Thun Nam Tay Ngắn Cotton Polyester In Hình Form Loose</p>
+                    <div class="d-flex gap-5">
+                      <p class="fs-14px text-secondary-emphasis mb-0">Màu: Xanh lá</p>
+                      <p class="fs-14px text-secondary-emphasis mb-0">Size: M</p>
+                    </div>
+                  </div>
+                  <div class="add-quantity">
+                    <div class="input-group border rounded" style="width: 40%;">
+                      <button class="input-group-text text-primary h-100 bg-white border-0 decrease-btn">-</button>
+                      <input type="number" class="form-control border-0 text-center input-quantity" value=1>
+                      <button class="input-group-text text-primary h-100 bg-white border-0 increase-btn">+</button>
+                    </div>
+                  </div>
+                  <div class="Price">
+                    <h3 class="prod-price fs-20px text-primary fw-medium">441.000<span class="fs-12px fw-medium text-decoration-underline" style="vertical-align: super;">đ</span></h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </label>
+        </div>
+        <!-- Thành tiền và đặt hàng -->
+        <div class="modal-footer d-flex align-items-center justify-content-between">
+          <div class="total-price"></div>
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Thanh toán</button>
+        </div>
+      </div>
+    </div>
+  </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="./script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

@@ -141,3 +141,5 @@ quantityInput.addEventListener('change', () => {
 document.querySelector('.add-to-cart-btn').addEventListener('click', () => {
   alert('Đã thêm sản phẩm vào giỏ hàng!');
 })
+
+
