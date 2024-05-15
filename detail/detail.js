@@ -4,14 +4,14 @@ function img(imageURL){
 
 
 // ---------------------Thông tin sản phẩm--------------------
-const product = JSON.parse(localStorage.getItem('selectedProduct'));
+const product_info = JSON.parse(localStorage.getItem('selectedProduct'));
 // Ảnh chính
-$('.prod-main-image').attr('src', `../image/${product.folder}/${product.folder}_1.png`);
+$('.prod-main-image').attr('src', `../image/${product_info.folder}/${product_info.folder}_1.png`);
 // Option ảnh
 const optionImage = $('.option-image');
 optionImage.empty();
 for(let i = 1; i <= 6; i++){
-  const imgElement = $(`<img src="../image/${product.folder}/${product.folder}_${i}.png" onclick="img('../image/${product.folder}/${product.folder}_${i}.png')">`);
+  const imgElement = $(`<img src="../image/${product_info.folder}/${product_info.folder}_${i}.png" onclick="img('../image/${product_info.folder}/${product_info.folder}_${i}.png')">`);
   // Xoá ảnh không tồn tại 
   imgElement.on('error', function() {
     $(this).remove();
@@ -19,11 +19,11 @@ for(let i = 1; i <= 6; i++){
   optionImage.append(imgElement);
 }
 // Option size
-if(product.folder.includes("_man")){
+if(product_info.folder.includes("_man")){
   document.querySelector('.select-size div:nth-of-type(2)').classList.add('d-none');
   document.querySelector('.select-size div:nth-of-type(3)').classList.add('d-none');
 }
-else if(product.folder.includes("_woman")){
+else if(product_info.folder.includes("_woman")){
   document.querySelector('.select-size div:nth-of-type(1)').classList.add('d-none');
   document.querySelector('.select-size div:nth-of-type(3)').classList.add('d-none');
 }
@@ -32,19 +32,19 @@ else{
   document.querySelector('.select-size div:nth-of-type(2)').classList.add('d-none');
 }
 // Tên sản phẩm
-$('.prod-name').text(product.name);
+$('.prod-name').text(product_info.name);
 // Giá sản phẩm
-$('.prod-price').html(product.price + '<span class="fs-5 fw-bold text-decoration-underline" style="vertical-align: super;">đ</span>');
+$('.prod-price').html(product_info.price + '<span class="fs-5 fw-bold text-decoration-underline" style="vertical-align: super;">đ</span>');
 // Màu sản phẩm
 const optionColor = $('.option-color');
 optionColor.empty();
-const colors = product.color;
+const colors = product_info.color;
 colors.forEach((color) => {
   const c = $(`<span class="rounded-circle" style="background-color: ${color};"></span>`);
   optionColor.append(c);
 });
 
-
+let info = {folder: product_info.folder, name: product_info.name, color: '', size: ''};
 
 
 // ---------------------Tên màu sắc---------------------
@@ -73,6 +73,7 @@ colorButton.forEach((color) => {
   color.addEventListener('click', function(){
     if(color.classList.contains('border', 'border-2', 'border-primary')){
       color.classList.remove('border', 'border-2', 'border-primary');
+      info.color = '';
       colorShow.textContent = 'Chọn màu sắc: ';
     }
     else{
@@ -80,8 +81,8 @@ colorButton.forEach((color) => {
         c.classList.remove('border', 'border-2', 'border-primary');
       });
       color.classList.add('border', 'border-2', 'border-primary');
-      console.log(color.style.backgroundColor);
       const colorName = colorsName[color.style.backgroundColor];
+      info.color = colorName;
       colorShow.textContent = `Chọn màu sắc: ${colorName}`;
     }
   })
@@ -98,6 +99,7 @@ sizeButton.forEach((button) => {
     if(button.classList.contains('text-white', 'bg-primary')){
       button.classList.remove('text-white', 'bg-primary');
       button.classList.add('text-primary', 'bg-white');
+      info.size = '';
       sizeShow.textContent = 'Chọn size: ';
     }
     else{
@@ -110,11 +112,14 @@ sizeButton.forEach((button) => {
       button.classList.add('text-white', 'bg-primary');
       button.classList.remove('text-primary', 'bg-white');
       // Hiển thị size đã chọn
+      info.size = button.textContent;
       sizeShow.textContent = 'Chọn size: ' + button.textContent;
     }
   })
 })
 
+
+let quantity = {quantity: 1, price: product_info.price}
 
 
 // ---------------------Thay đổi số lượng---------------------
@@ -125,6 +130,7 @@ document.querySelector('.increase-btn').addEventListener('click', ()=>{
   let currentValue = parseInt(quantityInput.value);
   quantityInput.value = currentValue + 1;
   quantityShow.textContent = 'Số lượng: ' + quantityInput.value;
+  quantity.quantity = quantityInput.value;
 });
 // Giảm số lượng
 document.querySelector('.decrease-btn').addEventListener('click', ()=>{
@@ -133,13 +139,26 @@ document.querySelector('.decrease-btn').addEventListener('click', ()=>{
     quantityInput.value = currentValue - 1;
   }
   quantityShow.textContent = 'Số lượng: ' + quantityInput.value;
+  quantity.quantity = quantityInput.value;
 });
 quantityInput.addEventListener('change', () => {
   quantityShow.textContent = 'Số lượng: ' + quantityInput.value;
+  quantity.quantity = quantityInput.value;
 });
 
+
+
+// -----------------Thêm sản phẩm vào giỏ hàng-----------------
+
 document.querySelector('.add-to-cart-btn').addEventListener('click', () => {
-  alert('Đã thêm sản phẩm vào giỏ hàng!');
-})
-
-
+  let cart = JSON.parse(localStorage.getItem('shoppingCart')) || [];
+  if(info.color != '' && info.size != ''){
+    const product = {info : info, quantity : quantity} 
+    cart.push(product);
+    localStorage.setItem('shoppingCart', JSON.stringify(cart));
+    alert('Đã thêm sản phẩm vào giỏ hàng!');
+  }
+  else{
+    alert('Chưa chọn thuộc tính sản phẩm!');
+  }
+});
