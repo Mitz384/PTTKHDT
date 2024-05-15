@@ -6,12 +6,12 @@ function img(imageURL){
 // ---------------------Thông tin sản phẩm--------------------
 const product_info = JSON.parse(localStorage.getItem('selectedProduct'));
 // Ảnh chính
-$('.prod-main-image').attr('src', `../image/${product_info.folder}/${product_info.folder}_1.png`);
+$('.prod-main-image').attr('src', `${product_info.baseURL}/${product_info.folder}_1.png`);
 // Option ảnh
 const optionImage = $('.option-image');
 optionImage.empty();
 for(let i = 1; i <= 6; i++){
-  const imgElement = $(`<img src="../image/${product_info.folder}/${product_info.folder}_${i}.png" onclick="img('../image/${product_info.folder}/${product_info.folder}_${i}.png')">`);
+  const imgElement = $(`<img src="${product_info.baseURL}/${product_info.folder}_${i}.png" onclick="img('${product_info.baseURL}/${product_info.folder}_${i}.png')">`);
   // Xoá ảnh không tồn tại 
   imgElement.on('error', function() {
     $(this).remove();
@@ -44,7 +44,7 @@ colors.forEach((color) => {
   optionColor.append(c);
 });
 
-let info = {folder: product_info.folder, name: product_info.name, color: '', size: ''};
+let info = {baseURL: product_info.baseURL, folder: product_info.folder, name: product_info.name, color: '', size: ''};
 
 
 // ---------------------Tên màu sắc---------------------
@@ -119,7 +119,7 @@ sizeButton.forEach((button) => {
 })
 
 
-let quantity = {quantity: 1, price: product_info.price}
+
 
 
 // ---------------------Thay đổi số lượng---------------------
@@ -145,8 +145,7 @@ quantityInput.addEventListener('change', () => {
   quantityShow.textContent = 'Số lượng: ' + quantityInput.value;
   quantity.quantity = quantityInput.value;
 });
-
-
+let quantity = {quantity: quantityInput.value, price: product_info.price}
 
 // -----------------Thêm sản phẩm vào giỏ hàng-----------------
 
@@ -157,8 +156,71 @@ document.querySelector('.add-to-cart-btn').addEventListener('click', () => {
     cart.push(product);
     localStorage.setItem('shoppingCart', JSON.stringify(cart));
     alert('Đã thêm sản phẩm vào giỏ hàng!');
+    upCart();
   }
   else{
     alert('Chưa chọn thuộc tính sản phẩm!');
   }
 });
+
+
+function upCart(){
+  const product_cart = JSON.parse(localStorage.getItem('shoppingCart'));
+  console.log(product_cart);
+  const cartShow = $('#cartModal .modal-body');
+  document.querySelector('#cartModal .modal-body').innerHTML = '';
+  if(product_cart == null){
+    cartShow.append(
+      $(`<p>Không có sản phẩm trong giỏ hàng</p>`)
+    );
+  }
+  else{
+    let productID = 1;
+    product_cart.forEach((p) => {
+      p.ID = productID;
+      cartShow.append(
+        $(`
+        <div class="d-flex list_prod_cart cart-prod-${productID}">
+          <input type="checkbox" name="" id="select-prod_${productID}">
+          <label for="select-prod_${productID}">
+            <div class="container">
+              <div class="row">
+                <div class="col-4">
+                  <img src="${p.info.baseURL}/${p.info.folder}_1.png" alt="" class="rounded overflow-hidden"  style="max-width: 100%; height: auto;">
+                </div>
+                <div class="col-8 pe-0 modal-product-description d-flex align-iteams-center justify-content-between pe-3"
+                  <div class="col-11 d-flex flex-column gap-3 ">
+                    <div class="selected-info d-flex flex-column gap-2 w-100">
+                      <p class="fs-14px m-0">${p.info.name}</p>
+                      <div class="d-flex gap-5">
+                        <p class="fs-14px text-secondary-emphasis mb-0">Màu: ${p.info.color}</p>
+                        <p class="fs-14px text-secondary-emphasis mb-0">Size: ${p.info.size}</p>
+                      </div>
+                      <div class="add-quantity">
+                        <div class="input-group border rounded" style="width: 30%;">
+                          <button class="input-group-text text-primary h-100 bg-white border-0 decrease-btn-${productID}">-</button>
+                          <input type="number" class="form-control border-0 text-center input-quantity-${productID}" value=${p.quantity.quantity}>
+                          <button class="input-group-text text-primary h-100 bg-white border-0 increase-btn-${productID}">+</button>
+                        </div>
+                      </div>
+                      <div class="Price">
+                        <h3 class="prod-price-${productID} fs-20px text-primary fw-medium">${p.quantity.price}<span class="fs-12px fw-medium text-decoration-underline" style="vertical-align: super;">đ</span></h3>
+                      </div>
+                    </div>
+                    <div class="col-1 d-flex align-items-center">
+                      <button class="btn" onclick="removeFromCart(${productID})">
+                        <i class="bi bi-trash-fill" style="font-size; 30px"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </label>
+        </div>`
+        )
+      );
+      productID++;
+    });
+  }
+}
