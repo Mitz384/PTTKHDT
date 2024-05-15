@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clothes Store</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Racing+Sans+One&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Racing+Sans+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="./css/main.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="d-flex flex-column gap-5">
+    <!-- Thanh điều hướng -->
+    <nav class="navbar navbar-expand-lg pt-0 pb-0 bg-primary">
+      <div class="container-md px-0">
+        <div class="logo">
+          <a class="navbar-brand ff-RacingSansOne fs-3 text-white" href="#" style="cursor: pointer;">Clothes<br/>Store</a>
+        </div>
+        
+        <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#toggleMobileMenu" aria-controls="toggleMobileMenu" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Menu -->
+        <div class="collapse navbar-collapse justify-content-end" id="toggleMobileMenu">
+          <ul class="navbar-nav gap-lg-5">
+            <li class="nav-item">
+              <a class="nav-link text-white text-center" href="#">Thời trang nam</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white text-center" href="#">Thời trang nữ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white text-center" href="#">Thời trang trẻ em</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Icon -->
+        <div class="collapse navbar-collapse justify-content-end" id="toggleMobileMenu">
+          <ul class="navbar-nav gap-lg-4">
+            <!-- Tìm kiếm -->
+            <li class="nav-item">
+              <a class="nav-link text-white text-center d-none d-lg-block" data-bs-toggle="modal" data-bs-target="#searchModal" href="#">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_76_23)">
+                  <path d="M10.1486 19.44C15.2801 19.44 19.44 15.2801 19.44 10.1486C19.44 5.01706 15.2801 0.857147 10.1486 0.857147C5.01706 0.857147 0.857147 5.01706 0.857147 10.1486C0.857147 15.2801 5.01706 19.44 10.1486 19.44Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M23.1429 23.1429L16.7143 16.7143" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </g>
+                  <defs>
+                  <clipPath id="clip0_76_23">
+                  <rect width="24" height="24" fill="white"/>
+                  </clipPath>
+                  </defs>
+                </svg>
+              </a>
+              <a class="nav-link text-white text-center d-lg-none" href="#">Tìm kiếm</a>
+            </li>
+            <!-- Tài khoản -->
+            <li class="nav-item">
+              <a class="nav-link text-white text-center d-none d-lg-block" data-bs-toggle="modal" data-bs-target="#loginModal" href="#">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_67_64)">
+                  <path d="M12 12C15.077 12 17.5714 9.50559 17.5714 6.42858C17.5714 3.35156 15.077 0.857147 12 0.857147C8.92297 0.857147 6.42856 3.35156 6.42856 6.42858C6.42856 9.50559 8.92297 12 12 12Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M22.5943 23.1429C21.8746 20.8986 20.4608 18.9409 18.5568 17.552C16.6527 16.163 14.3568 15.4146 12 15.4146C9.64318 15.4146 7.34725 16.163 5.44321 17.552C3.53918 18.9409 2.1254 20.8986 1.4057 23.1429H22.5943Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </g>
+                  <defs>
+                  <clipPath id="clip0_67_64">
+                  <rect width="24" height="24" fill="white"/>
+                  </clipPath>
+                  </defs>
+                  </svg>
+              </a>
+              <a class="nav-link text-white text-center d-lg-none" href="#">Tài khoản</a>
+            </li>
+            <!-- Giỏ hàng -->
+            <li class="nav-item">
+              <a class="nav-link text-white text-center d-none d-lg-block" href="#">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_65_55)">
+                <path d="M20.88 12.8571H6.85714L5.14285 4.28571H22.2857C22.4111 4.28617 22.5348 4.31412 22.6482 4.3676C22.7616 4.42107 22.8619 4.49877 22.942 4.59521C23.0221 4.69166 23.08 4.80449 23.1118 4.92577C23.1435 5.04705 23.1483 5.17382 23.1257 5.29713L21.72 12.1543C21.6872 12.3525 21.5844 12.5325 21.4303 12.6614C21.2762 12.7904 21.0809 12.8598 20.88 12.8571V12.8571Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M5.14282 4.28572L4.42282 1.54286C4.3833 1.34926 4.27811 1.17525 4.12503 1.05029C3.97196 0.925339 3.78042 0.857107 3.58282 0.857147H0.857108" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M6.85712 12.8571L7.57712 16.4571C7.61664 16.6508 7.72183 16.8248 7.87491 16.9497C8.02798 17.0747 8.21952 17.1429 8.41712 17.1429H18.8571" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M18 23.1429C17.5266 23.1429 17.1428 22.7591 17.1428 22.2857C17.1428 21.8123 17.5266 21.4286 18 21.4286C18.4734 21.4286 18.8571 21.8123 18.8571 22.2857C18.8571 22.7591 18.4734 23.1429 18 23.1429Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M9.42856 23.1429C8.95518 23.1429 8.57142 22.7591 8.57142 22.2857C8.57142 21.8123 8.95518 21.4286 9.42856 21.4286C9.90195 21.4286 10.2857 21.8123 10.2857 22.2857C10.2857 22.7591 9.90195 23.1429 9.42856 23.1429Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_65_55">
+                <rect width="24" height="24" fill="white" transform="matrix(-1 0 0 1 24 0)"/>
+                </clipPath>
+                </defs>
+                </svg>
+              </a>
+              <a class="nav-link text-white text-center d-lg-none" href="#">Giỏ hàng</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    <!-- Banner -->
+    <div class="container-lg d-none d-lg-block  d-flex banner px-0 text-white justify-content-center align-items-center" style="margin-top: 150px;">
+      <img class="w-100" src="https://routine.vn/media/catalog/category/Uu-dai-vui-he-giam-50_-cho-san-pham-thu-2_6_.jpg" alt="">
+    </div>
+    <div class="container-lg d-lg-none d-flex banner px-0 text-white justify-content-center align-items-center" style="margin-top: 100px;">
+      <img class="w-100" src="https://routine.vn//media/catalog/category/Uu-dai-vui-he-giam-50_-cho-san-pham-thu-2_3_.jpg" alt="">
+    </div>
+
+    <!-- Sản phẩm demo -->
+    <div class="container-lg product-demo px-0 d-flex flex-column gap-5">
+      <!-- Thời trang nam -->
+      <div class="container-lg d-flex flex-column gap-4 px-0">
+        <h1 class="text-center fs-2 fw-semibold">THỜI TRANG NAM</h1>
+        <div class="container px-0">
+          <div class="row col-gap-1 row-gap-3">
+            <!-- Sản phẩm 1 -->
+            <div class="col-lg-3 col-6">
+              <a class="card text-decoration-none border-0 rounded overflow-hidden">
+                <img src="./image/Product_man_1/Product_man_1_1.png" class="rounded-bottom prod-img" alt="...">
+                <div class="card-body ps-0">
+                  <p class="prod-name fs-14px text-primary">Áo Thun Nam Tay Ngắn Cotton Polyester In Hình Form Loose</p>
+                  <h3 class="prod-price fs-20px text-primary fw-semibold">441.000<span class="fs-10px" style="vertical-align: super;">đ</span></h3>
+                  <div class="prod-color d-flex gap-2">
+                    <div class="product-color rounded-circle" style="background-color: #30504b;"></div>
+                    <div class="product-color rounded-circle" style="background-color: #d1cab8;"></div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- Sản phẩm 2 -->
+            <div class="col-lg-3 col-6">
+              <a class="card text-decoration-none border-0 rounded overflow-hidden">
+                <img src="./image/Product_man_2/Product_man_2_1.png" class="rounded-bottom prod-img" alt="...">
+                <div class="card-body ps-0">
+                  <p class="prod-name fs-14px text-primary">Quần Jean Nam Ống Ôm Xanh Trơn Form Slim</p>
+                  <h3 class="prod-price fs-20px text-primary fw-semibold">589.000<span class="fs-10px" style="vertical-align: super;">đ</span></h3>
+                  <div class="prod-color d-flex gap-2">
+                    <div class="product-color rounded-circle" style="background-color: #456283;"></div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- Sản phẩm 3 -->
+            <div class="col-lg-3 col-6">
+              <a class="card text-decoration-none border-0 rounded overflow-hidden">
+                <img src="./image/Product_man_3/Product_man_3_1.png" class="rounded-bottom  prod-img" alt="...">
+                <div class="card-body ps-0">
+                  <p class="prod-name fs-14px text-primary">Áo thun nam tay ngắn fitted</p>
+                  <h3 class="prod-price fs-20px text-primary fw-semibold">373.000<span class="fs-10px" style="vertical-align: super;">đ</span></h3>
+                  <div class="prod-color d-flex gap-2">
+                    <div class="product-color rounded-circle" style="background-color: #000000;"></div>
+                    <div class="product-color rounded-circle" style="background-color: #cecece;"></div>
+                    <div class="product-color rounded-circle" style="background-color: #d1cab8;"></div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- Sản phẩm 4 -->
+            <div class="col-lg-3 col-6">
+              <a class="card text-decoration-none border-0 rounded overflow-hidden">
+                <img src="./image/Product_man_4/Product_man_4_1.png" class="rounded-bottom  prod-img" alt="...">
+                <div class="card-body ps-0">
+                  <p class="prod-name fs-14px text-primary">Quần Jean Nam Ống Ôm Spandex Co Giãn Form Slim</p>
+                  <h3 class="prod-price fs-20px text-primary fw-semibold">589.000<span class="fs-10px" style="vertical-align: super;">đ</span></h3>
+                  <div class="prod-color d-flex gap-2">
+                    <div class="product-color rounded-circle" style="background-color: #444a5b;"></div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="btn-more d-flex justify-content-center">
+          <button class="more border border-1 border-primary rounded bg-white text-primary
+           fw-semibold" style="width: 174px; height: 32px;">XEM THÊM</button>
+        </div>
+      </div>
+
+      <!-- Thời trang nữ -->
+      <div class="container-lg d-flex flex-column gap-4 px-0">
+        <h1 class="text-center fs-2 fw-semibold">THỜI TRANG NỮ</h1>
+        <div class="container px-0">
+          <div class="row col-gap-1 row-gap-3">
+            <!-- Sản phẩm 1 -->
+            <div class="col-lg-3 col-6">
+              <a class="card text-decoration-none border-0 rounded overflow-hidden" href="#">
+                <img src="./image/Product_woman_1/Product_woman_1_1.png" class="rounded-bottom  prod-img" alt="...">
+                <div class="card-body ps-0">
+                  <p class="prod-name fs-14px text-primary">Chân Váy Nữ Dài 100% Cotton Kẻ Sọc Form Loose</p>
+                  <h3 class="prod-price fs-20px text-primary fw-semibold">540.000<span class="fs-10px" style="vertical-align: super;">đ</span></h3>
+                  <div class="prod-color d-flex gap-2">
+                    <div class="product-color rounded-circle" style="background-color: #b0bee4;"></div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- Sản phẩm 2 -->
+            <div class="col-lg-3 col-6">
+              <a class="card text-decoration-none border-0 rounded overflow-hidden" href="#">
+                <img src="./image/Product_woman_2/Product_woman_2_1.png" class="rounded-bottom  prod-img" alt="...">
+                <div class="card-body ps-0">
+                  <p class="prod-name fs-14px text-primary">Chân Váy Jean Nữ Dài Chữ A Túi Đắp Trơn Form A Line</p>
+                  <h3 class="prod-price fs-20px text-primary fw-semibold">540.000<span class="fs-10px" style="vertical-align: super;">đ</span></h3>
+                  <div class="prod-color d-flex gap-2">
+                    <div class="product-color rounded-circle" style="background-color: #121926;"></div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- Sản phẩm 3 -->
+            <div class="col-lg-3 col-6">
+              <a class="card text-decoration-none border-0 rounded overflow-hidden" href="#">
+                <img src="./image/Product_woman_3/Product_woman_3_1.png" class="rounded-bottom  prod-img" alt="...">
+                <div class="card-body ps-0">
+                  <p class="prod-name fs-14px text-primary">Chân Váy Midi Nữ Lưng Thun Xếp Ly Trơn Form Aline</p>
+                  <h3 class="prod-price fs-20px text-primary fw-semibold">638.000<span class="fs-10px" style="vertical-align: super;">đ</span></h3>
+                  <div class="prod-color d-flex gap-2">
+                    <div class="product-color rounded-circle" style="background-color: #7d5325;"></div>
+                    <div class="product-color rounded-circle" style="background-color: #000000;"></div>
+                    <div class="product-color rounded-circle" style="background-color: #d1cab8;"></div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- Sản phẩm 4 -->
+            <div class="col-lg-3 col-6">
+              <a class="card text-decoration-none border-0 rounded overflow-hidden" href="#">
+                <img src="./image/Product_woman_4/Product_woman_4_1.png" class="rounded-bottom  prod-img" alt="...">
+                <div class="card-body ps-0">
+                  <p class="prod-name fs-14px text-primary">Chân Váy Chữ A Jean Nữ Họa Tiết In Laser Form A Line</p>
+                  <h3 class="prod-price fs-20px text-primary fw-semibold">471.000<span class="fs-10px" style="vertical-align: super;">đ</span></h3>
+                  <div class="prod-color d-flex gap-2">
+                    <div class="product-color rounded-circle" style="background-color: #456283;"></div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="btn-more d-flex justify-content-center">
+          <button class="more border border-1 border-primary rounded bg-white text-primary
+           fw-semibold" style="width: 174px; height: 32px;">XEM THÊM</button>
+        </div>
+      </div>
+
+      <!-- Thời trang trẻ em -->
+      <div class="container-lg d-flex flex-column gap-4 px-0">
+        <h1 class="text-center fs-2 fw-semibold">THỜI TRANG TRẺ EM</h1>
+        <div class="container px-0">
+          <div class="row col-gap-1 row-gap-3">
+            <!-- Sản phẩm 1 -->
+            <div class="col-lg-3 col-6">
+              <a class="card text-decoration-none border-0 rounded overflow-hidden" href="#">
+                <img src="./image/Product_kid_1/Product_kid_1_1.png" class="rounded-bottom  prod-img" alt="...">
+                <div class="card-body ps-0">
+                  <p class="prod-name fs-14px text-primary">Quần soóc bé trai cạp chun</p>
+                  <h3 class="prod-price fs-20px text-primary fw-semibold">170.000<span class="fs-10px" style="vertical-align: super;">đ</span></h3>
+                  <div class="prod-color d-flex gap-2">
+                    <div class="product-color rounded-circle" style="background-color: #ccd0d3;"></div>
+                    <div class="product-color rounded-circle" style="background-color: #272a44;"></div>
+                    <div class="product-color rounded-circle" style="background-color: #f4e09f;"></div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- Sản phẩm 2 -->
+            <div class="col-lg-3 col-6">
+              <a class="card text-decoration-none border-0 rounded overflow-hidden" href="#">
+                <img src="./image/Product_kid_2/Product_kid_2_1.png" class="rounded-bottom prod-img" alt="...">
+                <div class="card-body ps-0">
+                  <p class="prod-name fs-14px text-primary">Bộ mặc nhà bé gái cotton cộc tay quần soóc</p>
+                  <h3 class="prod-price fs-20px text-primary fw-semibold">249.000<span class="fs-10px" style="vertical-align: super;">đ</span></h3>
+                  <div class="prod-color d-flex gap-2">
+                    <div class="product-color rounded-circle" style="background-color: #c7aad7;"></div>
+                    <div class="product-color rounded-circle" style="background-color: #f6d9e5;"></div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- Sản phẩm 3 -->
+            <div class="col-lg-3 col-6">
+              <a class="card text-decoration-none border-0 rounded overflow-hidden" href="#">
+                <img src="./image/Product_kid_3/Product_kid_3_1.png" class="rounded-bottom prod-img" alt="...">
+                <div class="card-body ps-0">
+                  <p class="prod-name fs-14px text-primary">Bộ mặc nhà bé gái cộc tay quần soóc in hoạ tiết</p>
+                  <h3 class="prod-price fs-20px text-primary fw-semibold">249.000<span class="fs-10px" style="vertical-align: super;">đ</span></h3>
+                  <div class="prod-color d-flex gap-2">
+                    <div class="product-color rounded-circle" style="background-color: #f6d9e5;"></div>
+                    <div class="product-color rounded-circle" style="background-color: #c7aad7;"></div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- Sản phẩm 4 -->
+            <div class="col-lg-3 col-6">
+              <a class="card text-decoration-none border-0 rounded overflow-hidden" href="#">
+                <img src="./image/Product_kid_4/Product_kid_4_1.png" class="rounded-bottom  prod-img" alt="...">
+                <div class="card-body ps-0">
+                  <p class="prod-name fs-14px text-primary">Bộ mặc nhà bé trai áo ba lỗ quần soóc có hình in</p>
+                  <h3 class="prod-price fs-20px text-primary fw-semibold">299.000<span class="fs-10px" style="vertical-align: super;">đ</span></h3>
+                  <div class="prod-color d-flex gap-2">
+                    <div class="product-color rounded-circle" style="background-color: #ccd0d3;"></div>
+                    <div class="product-color rounded-circle" style="background-color: #000000;"></div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="btn-more d-flex justify-content-center">
+          <button class="more border border-1 border-primary rounded bg-white text-primary
+           fw-semibold" style="width: 174px; height: 32px;">XEM THÊM</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chân trang -->
+    <div class="bg-primary">
+      <div class="container py-4 px-0">
+        <ul class="px-0 row row-gap-5">
+          <!-- Tên công ty và địa chỉ -->
+          <li class=" col-lg-3 col-6 d-flex flex-column gap-1">
+            <h3 class="ff-RacingSansOne fs-3 text-white m-0" href="#">Clothes<br/>Store</h3>
+            <div class="logoAddress-content d-flex flex-column gap-3">
+              <p class="fw-semibold text-white m-0">Công ty TNHH Clothes Store</p>
+              <p class="fs-14px text-white m-0" style="max-width: 270px;">Địa chỉ: Tầng 7 toà A, Trường Đại học Thăng Long, Nghiêm Xuân Yêm - Đại Kim - Hoàng Mai - Hà Nội</p>
+            </div>
+          </li>
+          <li class="col-lg-3 col-6 d-flex flex-column gap-1">
+            <p class="fw-semibold text-white">CÔNG TY</p>
+            <a href="#" class="text-decoration-none text-white fs-14px">Giới thiệu về Clothes Store</a>
+            <a href="#" class="text-decoration-none text-white fs-14px">Tuyển dụng</a>
+            <a href="#" class="text-decoration-none text-white fs-14px">Hợp tác nhượng quyền</a>
+            <a href="#" class="text-decoration-none text-white fs-14px">Liên hệ</a>
+          </li>
+          <li class="col-lg-3 col-6 d-flex flex-column gap-1">
+            <p class="fw-semibold text-white">CHÍNH SÁCH KHÁCH HÀNG</p>
+            <a href="#" class="text-decoration-none text-white fs-14px">Chính sách đổi trả</a>
+            <a href="#" class="text-decoration-none text-white fs-14px">Chính sách bảo hành</a>
+            <a href="#" class="text-decoration-none text-white fs-14px">Các câu hỏi thường gặp</a>
+            <a href="#" class="text-decoration-none text-white fs-14px">Hướng dẫn mua hàng online</a>
+          </li>
+          <li class="col-lg-3 col-6 d-flex flex-column gap-1">
+            <p class="fw-semibold text-white">LIÊN HỆ VỚI CHÚNG TÔI</p>
+            <div class="d-flex gap-3">
+              <a href="https://www.facebook.com/profile.php?id=100025448852550" target="_blank"><i class="bi bi-facebook" style="font-size: 32px; color: #fff"></i></a>
+              <a href="https://www.instagram.com/augu_t.30/" target="_blank"><i class="bi bi-instagram" style="font-size: 32px; color: #fff"></i></a>
+              <a href="https://www.tiktok.com/" target="_blank"><i class="bi bi-tiktok" style="font-size: 32px; color: #fff;"></i></a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Đăng nhập -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModal" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body d-flex flex-column align-items-center justify-content-center p-5 gap-3">
+          <h1 class="text-primary">Login</h1>
+          <!-- Form login -->
+          <div class="login-form d-flex flex-column gap-2 w-100">
+            <input type="email" class="form-control bg-white border-0 border-bottom border-1 border-primary rounded-0 text-primary" placeholder="Email">
+            <input type="password" class="form-control bg-white border-0 border-bottom border-1 border-primary rounded-0 text-primary" placeholder="Password">
+            <div class="autologin">
+              <input type="checkbox" class="input-checkbox border-0" id="autologin">
+              <label for="autologin" class="text-primary fs-12px">Tự động đăng nhập</label>
+            </div>
+          </div>
+          <!-- Login button -->
+          <button class="login-btn btn bg-primary text-white w-100 fw-medium">Đăng nhập</button>
+          <p href="">Bạn chưa có tài khoản?  <span><a href="" data-bs-toggle="modal" data-bs-target="#signupModal">Đăng ký</a></span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Đăng ký -->
+  <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModal" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body d-flex flex-column align-items-center justify-content-center p-5 gap-3">
+          <h1 class="text-primary">Sign up</h1>
+          <!-- Form login -->
+          <div class="login-form d-flex flex-column gap-2 w-100">
+            <div class="name-input d-flex gap-4">
+              <input type="text" class="form-control bg-white border-0 border-bottom border-1 border-primary rounded-0 text-primary" placeholder="Họ">
+              <input type="text" class="form-control bg-white border-0 border-bottom border-1 border-primary rounded-0 text-primary" placeholder="Tên">
+            </div>
+            <input type="email" class="form-control bg-white border-0 border-bottom border-1 border-primary rounded-0 text-primary" placeholder="Email">
+            <input type="text" class="form-control bg-white border-0 border-bottom border-1 border-primary rounded-0 text-primary" placeholder="Số điện thoại">
+            <input type="password" class="form-control bg-white border-0 border-bottom border-1 border-primary rounded-0 text-primary" placeholder="Password">
+            <div class="d-flex gap-2">
+              <input type="text" class="form-control bg-white border-0 border-bottom border-1 border-primary rounded-0 text-primary" placeholder="Nhập mã OTP">
+              <button class="btn border border-1 border-primary col-3 btn-outline-primary">Gửi OTP</button>
+            </div>
+            <div class="autologin">
+              <input type="checkbox" class="input-checkbox border-0" id="accept-condition">
+              <label for="accept-condition" class="text-primary fs-12px">Đồng ý với các điều khoản</label>
+            </div>
+          </div>
+          <!-- Login button -->
+          <button class="login-btn btn bg-primary text-white w-100 fw-medium">Đăng ký</button>
+          <p href="">Bạn đã có tài khoản?  <span><a href="" data-bs-toggle="modal" data-bs-target="#loginModal">Đăng nhập</a></span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Tìm kiếm -->
+  <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModal" aria-hidden="true">
+    <div class="modal-dialog mb-2" style="max-width: none;">
+      <div class="modal-content">
+        <!-- Form tìm kiếm -->
+        <div class="modal-body d-flex flex-column gap-3">  
+          <div class="form-search w-100 d-flex align-items-center justify-content-center p-4 gap-lg-5">
+            <div class="d-flex gap-2 border border-1 border-primary rounded-pill px-3 col-xl-6 col-md-8 col">
+              <input type="text" class="form-control bg-white border-0 text-primary" placeholder="Tìm kiếm sản phẩm...">
+              <button type="button" class="btn btn-search">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_76_23)">
+                  <path d="M10.1486 19.44C15.2801 19.44 19.44 15.2801 19.44 10.1486C19.44 5.01706 15.2801 0.857147 10.1486 0.857147C5.01706 0.857147 0.857147 5.01706 0.857147 10.1486C0.857147 15.2801 5.01706 19.44 10.1486 19.44Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M23.1429 23.1429L16.7143 16.7143" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </g>
+                  <defs>
+                  <clipPath id="clip0_76_23">
+                  <rect width="24" height="24" fill="white"/>
+                  </clipPath>
+                  </defs>
+                </svg>                
+              </button>
+            </div>
+            <button type="button" class="btn-close d-none d-lg-block" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-lg bg-white rounded p-4">
+      <p class="text-primary fw-semibold">Từ khoá nổi bật</p>
+      <div class="key-search">
+        <button class="btn border border-1 border-primary rounded-pill fs-12px">Áo phông</button>
+        <button class="btn border border-1 border-primary rounded-pill fs-12px">Áo Polo</button>
+        <button class="btn border border-1 border-primary rounded-pill fs-12px">Baby tee</button>
+        <button class="btn border border-1 border-primary rounded-pill fs-12px">Quần short</button>
+        <button class="btn border border-1 border-primary rounded-pill fs-12px">Quần jeans</button>
+      </div>
+      
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="./script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

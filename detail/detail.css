@@ -1,0 +1,48 @@
+.main-image img{
+  max-width: 100%;
+  height: auto;
+}
+.option-image img{
+  max-width: 100%;
+}
+.option-color span{
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+.option-color span:hover{
+  border: 2px solid #212121;
+  box-shadow: 0 0 5px;
+}
+button:hover{
+  border: 1px solid #212121 !important;
+}
+
+.add-quantity input::placeholder{
+  text-align: center;
+  color: #212121;
+}
+.add-quantity input:focus{
+  text-align: center;
+  color: #212121;
+  outline: none;
+  box-shadow: none !important;
+}
+.add-quantity .input-group{
+  width: 30%;
+}
+.add-quantity .input-group:hover{
+  border: 1px solid #212121 !important;
+}
+.add-quantity button:hover{
+  border: none !important;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.add-to-cart-btn{
+  width: 60%;
+}
+
