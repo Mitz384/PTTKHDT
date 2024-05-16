@@ -1,6 +1,11 @@
 import * as func from './func.js';
 
 // Các option ảnh sản phẩm
+import * as func from './func.js';
+
+
+
+// Các option ảnh sản phẩm
 function img(imageURL){
   document.querySelector(".slide").src = imageURL;
 }

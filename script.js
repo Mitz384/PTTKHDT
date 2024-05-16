@@ -2,6 +2,10 @@ import * as func from './func.js';
 
 
 // Thao tác của nút 'Xem thêm'
+import * as func from './func.js';
+
+
+// Thao tác của nút 'Xem thêm'
 const seeMorebtn = document.querySelectorAll('.more');
 seeMorebtn.forEach(function(button){
   // Hành vi hover của chuột
