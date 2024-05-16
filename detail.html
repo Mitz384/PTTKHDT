@@ -21,7 +21,7 @@
     <nav class="navbar navbar-expand-lg pt-0 pb-0 bg-primary">
       <div class="container-md px-0">
         <div class="logo">
-          <a class="navbar-brand ff-RacingSansOne fs-3 text-white" href="./index.html" style="cursor: pointer;">Clothes<br/>Store</a>
+          <a class="navbar-brand ff-RacingSansOne fs-3 text-white" id="logo-detail" style="cursor: pointer;">Clothes<br/>Store</a>
         </div>
         
         <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#toggleMobileMenu" aria-controls="toggleMobileMenu" aria-expanded="false" aria-label="Toggle navigation">
@@ -80,7 +80,7 @@
             </li>
             <!-- Giỏ hàng -->
             <li class="nav-item shopping-cart">
-              <a class="nav-link text-white text-center d-none d-lg-block" data-bs-toggle="modal" data-bs-target="#cartModal" href="#">
+              <a class= "nav-link text-white text-center d-none d-lg-block shopping-cart-btn" data-bs-toggle="modal" data-bs-target="#cartModal" href="#">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_65_55)">
                 <path d="M20.88 12.8571H6.85714L5.14285 4.28571H22.2857C22.4111 4.28617 22.5348 4.31412 22.6482 4.3676C22.7616 4.42107 22.8619 4.49877 22.942 4.59521C23.0221 4.69166 23.08 4.80449 23.1118 4.92577C23.1435 5.04705 23.1483 5.17382 23.1257 5.29713L21.72 12.1543C21.6872 12.3525 21.5844 12.5325 21.4303 12.6614C21.2762 12.7904 21.0809 12.8598 20.88 12.8571V12.8571Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -310,7 +310,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <!-- Sản phẩm cần chọn -->
-        <div class="modal-body d-flex flex-column gap-3"></div>
+        <div class="modal-body d-flex flex-column gap-3">Không có sản phẩm trong giỏ hàng</div>
         <!-- Thành tiền và đặt hàng -->
         <div class="modal-footer d-flex align-items-center justify-content-between">
           <div class="total-price"></div>
@@ -325,8 +325,9 @@
 
   <!-- Script -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="./script.js"></script>
-  <script src="./detail.js"></script>
+  <script type="module" src="./script.js"></script>
+  <script type="module" src="./detail.js"></script>
+  <script type="module" src="func.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
