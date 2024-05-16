@@ -1,3 +1,8 @@
+import * as func from './func.js';
+
+
+
+// Các option ảnh sản phẩm
 function img(imageURL){
   document.querySelector(".slide").src = imageURL;
 }
@@ -47,6 +52,8 @@ colors.forEach((color) => {
 let info = {baseURL: product_info.baseURL, folder: product_info.folder, name: product_info.name, color: '', size: ''};
 
 
+
+
 // ---------------------Tên màu sắc---------------------
 const colorsName = {
   "rgb(48, 80, 75)" : "Xanh lá",
@@ -65,10 +72,11 @@ const colorsName = {
   "rgb(246, 217, 229)" : "Hồng nhạt"
 
 };
+
+
 // --------------------Thay đổi màu sắc--------------------------
 let colorButton = document.querySelectorAll('.option-color span');
 let colorShow = document.querySelector('.select-color h5');
-
 colorButton.forEach((color) => {
   color.addEventListener('click', function(){
     if(color.classList.contains('border', 'border-2', 'border-primary')){
@@ -92,7 +100,6 @@ colorButton.forEach((color) => {
 // --------------------Thay đổi size-----------------------------
 let sizeButton = document.querySelectorAll('.select-size button');
 let sizeShow = document.querySelector('.select-size h5');
-
 sizeButton.forEach((button) => {
   button.addEventListener('click', function(){
     // Kiểm tra tồn tại
@@ -151,9 +158,20 @@ let quantity = {quantity: quantityInput.value, price: product_info.price}
 
 document.querySelector('.add-to-cart-btn').addEventListener('click', () => {
   let cart = JSON.parse(localStorage.getItem('shoppingCart')) || [];
+  console.log(cart);
   if(info.color != '' && info.size != ''){
-    const product = {info : info, quantity : quantity} 
-    cart.push(product);
+    const product = {info : info, quantity : quantity}
+    let existingProduct = cart.find(p => p.info.name === product.info.name && p.info.color === product.info.color && p.info.size === product.info.size);
+    // -----------------------------------------------------------------------------------------------------------------------------------------------------------Đang sửa -------------------------------- ------------------------------------------------------------------------------------------------------------------------------------
+    if (existingProduct) {
+      // Nếu sản phẩm đã tồn tại, tăng số lượng
+      existingProduct.quantity.quantity = parseInt(existingProduct.quantity.quantity) + parseInt(product.quantity.quantity);
+    } 
+    else {
+      // Nếu không, thêm sản phẩm mới vào giỏ hàng
+      cart.push(product);
+    }
+    console.log(existingProduct.quantity.quantity);
     localStorage.setItem('shoppingCart', JSON.stringify(cart));
     alert('Đã thêm sản phẩm vào giỏ hàng!');
     upCart();
@@ -164,63 +182,12 @@ document.querySelector('.add-to-cart-btn').addEventListener('click', () => {
 });
 
 
+
+// -------------------Hiển thị sản phẩm trong giỏ hàng-------------------------
 function upCart(){
   const product_cart = JSON.parse(localStorage.getItem('shoppingCart'));
-  console.log(product_cart);
-  const cartShow = $('#cartModal .modal-body');
-  document.querySelector('#cartModal .modal-body').innerHTML = '';
-  if(product_cart == null){
-    cartShow.append(
-      $(`<p>Không có sản phẩm trong giỏ hàng</p>`)
-    );
-  }
-  else{
-    let productID = 1;
-    product_cart.forEach((p) => {
-      p.ID = productID;
-      cartShow.append(
-        $(`
-        <div class="d-flex list_prod_cart cart-prod-${productID}">
-          <input type="checkbox" name="" id="select-prod_${productID}">
-          <label for="select-prod_${productID}">
-            <div class="container">
-              <div class="row">
-                <div class="col-4">
-                  <img src="${p.info.baseURL}/${p.info.folder}_1.png" alt="" class="rounded overflow-hidden"  style="max-width: 100%; height: auto;">
-                </div>
-                <div class="col-8 pe-0 modal-product-description d-flex align-iteams-center justify-content-between pe-3"
-                  <div class="col-11 d-flex flex-column gap-3 ">
-                    <div class="selected-info d-flex flex-column gap-2 w-100">
-                      <p class="fs-14px m-0">${p.info.name}</p>
-                      <div class="d-flex gap-5">
-                        <p class="fs-14px text-secondary-emphasis mb-0">Màu: ${p.info.color}</p>
-                        <p class="fs-14px text-secondary-emphasis mb-0">Size: ${p.info.size}</p>
-                      </div>
-                      <div class="add-quantity">
-                        <div class="input-group border rounded" style="width: 30%;">
-                          <button class="input-group-text text-primary h-100 bg-white border-0 decrease-btn-${productID}">-</button>
-                          <input type="number" class="form-control border-0 text-center input-quantity-${productID}" value=${p.quantity.quantity}>
-                          <button class="input-group-text text-primary h-100 bg-white border-0 increase-btn-${productID}">+</button>
-                        </div>
-                      </div>
-                      <div class="Price">
-                        <h3 class="prod-price-${productID} fs-20px text-primary fw-medium">${p.quantity.price}<span class="fs-12px fw-medium text-decoration-underline" style="vertical-align: super;">đ</span></h3>
-                      </div>
-                    </div>
-                    <div class="col-1 d-flex align-items-center">
-                      <button class="btn" onclick="removeFromCart(${productID})">
-                        <i class="bi bi-trash-fill" style="font-size; 30px"></i>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </label>
-        </div>`
-        )
-      );
-      productID++;
-    });
-  }
+  func.printCart(product_cart);
+  func.upDateQuality(product_cart);
 }
+
+
