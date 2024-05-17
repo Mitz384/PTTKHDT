@@ -1,10 +1,5 @@
 import * as func from './func.js';
 
-
-// Thao tác của nút 'Xem thêm'
-import * as func from './func.js';
-
-
 // Thao tác của nút 'Xem thêm'
 const seeMorebtn = document.querySelectorAll('.more');
 seeMorebtn.forEach(function(button){
@@ -25,38 +20,10 @@ seeMorebtn.forEach(function(button){
   });
 });
 
-// Lấy thông tin đẩy vào local
-$('.card').click(function(){
-  const productImage = $(this).find('.prod-img').attr('src');
-  const productName = $(this).find('.prod-name').text();
-  let productPrice = $(this).find('.prod-price').text();
-  productPrice = productPrice.slice(0, -1);
-  let baseImageURL = productImage.substring(0, productImage.lastIndexOf("/"));
-  // Lấy folder
-  const folderName = baseImageURL.split('/')[baseImageURL.split('/').length - 1];
-  console.log(baseImageURL);
-  console.log(folderName);
-  // Lấy màu
-  let colors = [];
-  $(this).find('.product-color').each(function() {
-    var color = $(this).css('background-color');
-    colors.push(color);
-  });
-  const product_info = {baseURL: baseImageURL, folder: folderName, name:productName, price: productPrice, color: colors};
-  localStorage.setItem('selectedProduct', JSON.stringify(product_info));
-  window.location.href = "./detail.html";
-})
 
-
-
-// In thông tin sản phẩm trong giỏ hàng
-
-if(func.checkLoggedIn()){
-const product_cart = JSON.parse(localStorage.getItem('shoppingCart'));
-func.printCart(product_cart);
-func.upDateQuality(product_cart);
-}
-
+document.querySelector('#product_men_list_demo').innerHTML = func.productDemo('product_men_list');
+document.querySelector('#product_women_list_demo').innerHTML = func.productDemo('product_women_list');
+document.querySelector('#product_kid_list_demo').innerHTML = func.productDemo('product_kid_list');
 
 
 // Đăng nhập
@@ -75,3 +42,25 @@ $('.sign-up-btn').click(() => func.signUp());
 
 // Dăng xuất
 $('.logout-btn').click(() => func.logOut());
+
+
+
+$('.product_men_list').click(() => {
+  sessionStorage.setItem("className", 'product_men_list');
+  window.location.href = './product-list.html';
+})
+$('.product_women_list').click(() => {
+  sessionStorage.setItem("className", 'product_women_list');
+  window.location.href = './product-list.html';
+})
+$('.product_kid_list').click(() => {
+  sessionStorage.setItem("className", 'product_kid_list');
+  window.location.href = './product-list.html';
+})
+
+
+// Tìm kiếm
+document.getElementById('search-btn').addEventListener('click', function(){
+  func.searchProduct();
+  window.location.href = './product-list.html';
+})

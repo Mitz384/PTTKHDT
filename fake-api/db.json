@@ -1,0 +1,1008 @@
+{
+  "product_men_list": [
+    {
+      "id": "pm_1",
+      "info": {
+        "baseURL": "./image/Man/Product_man_1",
+        "folder": "Product_man_1",
+        "name": "Áo Thun Nam Tay Ngắn Cotton Polyester In Hình Form Loose",
+        "colorCode": [
+          "rgb(209, 202, 184)",
+          "rgb(48, 80, 75)"
+        ],
+        "color": [
+          "Be",
+          "Xanh lá"
+        ],
+        "size": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        "price": "441.000"
+      },
+      "quantity": {
+        "quantity": 1
+      }
+    },
+    {
+      "id": "pm_2",
+      "info": {
+        "baseURL": "./image/Man/Product_man_2",
+        "folder": "Product_man_2",
+        "name": "Quần Jean Nam Ống Ôm Xanh Trơn Form Slim",
+        "colorCode": [
+          "rgb(69, 98, 131)"
+        ],
+        "color": [
+          "Jeans xanh nhạt"
+        ],
+        "size": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        "price": "589.000"
+      },
+      "quantity": {
+        "quantity": 1
+      }
+    },
+    {
+      "id": "pm_3",
+      "info": {
+        "baseURL": "./image/Man/Product_man_3",
+        "folder": "Product_man_3",
+        "name": "Áo thun nam tay ngắn fitted",
+        "colorCode": [
+          "rgb(0, 0, 0)",
+          "rgb(206, 206, 206)",
+          "rgb(209, 202, 184)"
+        ],
+        "color": [
+          "Đen",
+          "Trắng",
+          "Be"
+        ],
+        "size": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        "price": "373.000"
+      },
+      "quantity": {
+        "quantity": 1
+      }
+    },
+    {
+      "id": "pm_4",
+      "info": {
+        "baseURL": "./image/Man/Product_man_4",
+        "folder": "Product_man_4",
+        "name": "Quần Jean Nam Ống Ôm Spandex Co Giãn Form Slim",
+        "colorCode": [
+          "rgb(68, 74, 91)"
+        ],
+        "color": [
+          "Jeans xanh đậm"
+        ],
+        "size": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        "price": "589.000"
+      },
+      "quantity": {
+        "quantity": 1
+      }
+    },
+    {
+      "id": "pm_5",
+      "info": {
+        "baseURL": "./image/Man/Product_man_5",
+        "folder": "Product_man_5",
+        "name": "Áo Thun Nam Tay Ngắn Vải S.Café In Chữ Form Loose",
+        "colorCode": [
+          "rgb(0, 0, 0)"
+        ],
+        "color": [
+          "Đen"
+        ],
+        "size": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        "price": "422.000"
+      },
+      "quantity": {
+        "quantity": 1
+      }
+    },
+    {
+      "id": "pm_6",
+      "info": {
+        "baseURL": "./image/Man/Product_man_6",
+        "folder": "Product_man_6",
+        "name": "Quần Jean Nam Trơn Ống Ôm Kiểu Basic Form Slim",
+        "colorCode": [
+          "rgb(69, 98, 131)"
+        ],
+        "color": [
+          "Jeans xanh nhạt"
+        ],
+        "size": [
+          "29",
+          "30",
+          "31",
+          "32",
+          "34"
+        ],
+        "price": "540.000"
+      },
+      "quantity": {
+        "quantity": 1
+      }
+    },
+    {
+      "id": "pm_7",
+      "info": {
+        "baseURL": "./image/Man/Product_man_7",
+        "folder": "Product_man_7",
+        "name": "Áo Thun Nam Tay Ngắn Coffee Cổ Tròn Trơn Form Loose",
+        "colorCode": [
+          "rgb(0, 0, 0)",
+          "rgb(209, 202, 184)"
+        ],
+        "color": [
+          "Đen",
+          "Be"
+        ],
+        "size": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        "price": "490.000"
+      },
+      "quantity": {
+        "quantity": 1
+      }
+    },
+    {
+      "id": "pm_8",
+      "info": {
+        "baseURL": "./image/Man/Product_man_8",
+        "folder": "Product_man_8",
+        "name": "Áo Polo Nam Tay Ngắn Cotton Thêu Chữ Form Boxy",
+        "colorCode": [
+          "rgb(0, 0, 0)",
+          "rgb(48, 80, 75)",
+          "rgb(206, 206, 206)"
+        ],
+        "color": [
+          "Đen",
+          "Xanh lá",
+          "Trắng"
+        ],
+        "size": [
+          "XS",
+          "S",
+          "M",
+          "L"
+        ],
+        "price": "490.000"
+      },
+      "quantity": {
+        "quantity": 1
+      }
+    },
+    {
+      "id": "pm_9",
+      "info": {
+        "baseURL": "./image/Man/Product_man_9",
+        "folder": "Product_man_9",
+        "name": "Quần Cargo Nam Túi Hộp Ống Rộng Trơn Form Wide Leg",
+        "colorCode": [
+          "rgb(209, 202, 184)"
+        ],
+        "color": [
+          "Be"
+        ],
+        "size": [
+          "29",
+          "30",
+          "31",
+          "32"
+        ],
+        "price": "638.000"
+      },
+      "quantity": {
+        "quantity": 1
+      }
+    },
+    {
+      "id": "pm_10",
+      "info": {
+        "baseURL": "./image/Man/Product_man_10",
+        "folder": "Product_man_10",
+        "name": "Áo Polo Nam Premium Tay Ngắn Phối Viền Cổ Form Fitted",
+        "colorCode": [
+          "rgb(39, 42, 68)",
+          "rgb(206, 206, 206)"
+        ],
+        "color": [
+          "Xanh than",
+          "Trắng"
+        ],
+        "size": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "price": "649.000"
+      },
+      "quantity": {
+        "quantity": 1
+      }
+    },
+    {
+      "id": "pm_11",
+      "info": {
+        "baseURL": "./image/Man/Product_man_11",
+        "folder": "Product_man_11",
+        "name": "Áo Sơ Mi Jean Unisex 100% Cotton Trơn Form Loose",
+        "colorCode": [
+          "rgb(68, 74, 91)"
+        ],
+        "color": [
+          "Jeans xanh đậm"
+        ],
+        "size": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        "price": "540.000"
+      },
+      "quantity": {
+        "quantity": 1
+      }
+    },
+    {
+      "id": "pm_12",
+      "info": {
+        "baseURL": "./image/Man/Product_man_12",
+        "folder": "Product_man_12",
+        "name": "Quần Tây Nam Ống Ôm Polyester Trơn Phối Lót Form Slim",
+        "colorCode": [
+          "rgb(0, 0, 0)",
+          "rgb(209, 202, 184)"
+        ],
+        "color": [
+          "Đen",
+          "Be"
+        ],
+        "size": [
+          "29",
+          "30",
+          "31",
+          "32",
+          "34"
+        ],
+        "price": "540.000"
+      },
+      "quantity": {
+        "quantity": 1
+      }
+    }
+  ],
+  "product_women_list": [
+    {
+      "id": "pw_1",
+      "info": {
+        "baseURL": "./image/Woman/Product_woman_1",
+        "folder": "Product_woman_1",
+        "name": "Chân Váy Nữ Dài 100% Cotton Kẻ Sọc Form Loose",
+        "colorCode": [
+          "rgb(176, 190, 228)"
+        ],
+        "color": [
+          "Xanh da trời"
+        ],
+        "size": [
+          "XS",
+          "S",
+          "M",
+          "L"
+        ],
+        "price": "638.000"
+      },
+      "quantity": {
+        "quantity": 1
+      }
+    },
+    {
+      "id": "pw_2",
+      "info": {
+        "baseURL": "./image/Woman/Product_woman_2",
+        "folder": "Product_woman_2",
+        "name": "Chân Váy Jean Nữ Dài Chữ A Túi Đắp Trơn Form A Line",
+        "colorCode": [
+          "rgb(68, 74, 91)"
+        ],
+        "color": [
+          "Jeans xanh đậm"
+        ],
+        "size": [
+          "24",
+          "26",
+          "28",
+          "30"
+        ],
+        "price": "540.000"
+      },
+      "quantity": {
+        "quantity": 1
+      }
+    },
+    {
+      "id": "pw_3",
+      "info": {
+        "baseURL": "./image/Woman/Product_woman_3",
+        "folder": "Product_woman_3",
+        "name": "Chân Váy Midi Nữ Lưng Thun Xếp Ly Trơn Form Aline",
+        "colorCode": [
+          "rgb(125, 83, 37)",
+          "rgb(0, 0, 0)",
+          "rgb(209, 202, 184)"
+        ],
+        "color": [
+          "Nâu",
+          "Đen",
+          "Be"
+        ],
+        "size": [
+          "XS",
+          "S",
+          "M",
+          "L"
+        ],
+        "price": "649.000"
+      },
+      "quantity": {
+        "quantity": 1
+      }
+    },
+    {
+      "id": "pw_4",
+      "info": {
+        "baseURL": "./image/Woman/Product_woman_4",
+        "folder": "Product_woman_4",
+        "name": "Quần Jean Nam Ống Ôm Spandex Co Giãn Form Slim",
+        "colorCode": [
+          "rgb(69, 98, 131)"
+        ],
+        "color": [
+          "Jeans xanh nhạt"
+        ],
+        "size": [
+          "24",
+          "26",
+          "28",
+          "30"
+        ],
+        "price": "479.000"
+      },
+      "quantity": {
+        "quantity": 1
+      }
+    },
+    {
+      "id": "pw_1",
+      "info": {
+        "baseURL": "./image/Woman/Product_woman_1",
+        "folder": "Product_woman_1",
+        "name": "Chân Váy Nữ Dài 100% Cotton Kẻ Sọc Form Loose",
+        "colorCode": [
+          "rgb(176, 190, 228)"
+        ],
+        "color": [
+          "Xanh da trời"
+        ],
+        "size": [
+          "XS",
+          "S",
+          "M",
+          "L"
+        ],
+        "price": "638.000"
+      },
+      "quantity": {
+        "quantity": 1
+      }
+    },
+    {
+      "id": "pw_2",
+      "info": {
+        "baseURL": "./image/Woman/Product_woman_2",
+        "folder": "Product_woman_2",
+        "name": "Chân Váy Jean Nữ Dài Chữ A Túi Đắp Trơn Form A Line",
+        "colorCode": [
+          "rgb(68, 74, 91)"
+        ],
+        "color": [
+          "Jeans xanh đậm"
+        ],
+        "size": [
+          "24",
+          "26",
+          "28",
+          "30"
+        ],
+        "price": "540.000"
+      },
+      "quantity": {
+        "quantity": 1
+      }
+    },
+    {
+      "id": "pw_3",
+      "info": {
+        "baseURL": "./image/Woman/Product_woman_3",
+        "folder": "Product_woman_3",
+        "name": "Chân Váy Midi Nữ Lưng Thun Xếp Ly Trơn Form Aline",
+        "colorCode": [
+          "rgb(125, 83, 37)",
+          "rgb(0, 0, 0)",
+          "rgb(209, 202, 184)"
+        ],
+        "color": [
+          "Nâu",
+          "Đen",
+          "Be"
+        ],
+        "size": [
+          "XS",
+          "S",
+          "M",
+          "L"
+        ],
+        "price": "649.000"
+      },
+      "quantity": {
+        "quantity": 1
+      }
+    },
+    {
+      "id": "pw_4",
+      "info": {
+        "baseURL": "./image/Woman/Product_woman_4",
+        "folder": "Product_woman_4",
+        "name": "Quần Jean Nam Ống Ôm Spandex Co Giãn Form Slim",
+        "colorCode": [
+          "rgb(69, 98, 131)"
+        ],
+        "color": [
+          "Jeans xanh nhạt"
+        ],
+        "size": [
+          "24",
+          "26",
+          "28",
+          "30"
+        ],
+        "price": "479.000"
+      },
+      "quantity": {
+        "quantity": 1
+      }
+    },
+    {
+      "id": "pw_1",
+      "info": {
+        "baseURL": "./image/Woman/Product_woman_1",
+        "folder": "Product_woman_1",
+        "name": "Chân Váy Nữ Dài 100% Cotton Kẻ Sọc Form Loose",
+        "colorCode": [
+          "rgb(176, 190, 228)"
+        ],
+        "color": [
+          "Xanh da trời"
+        ],
+        "size": [
+          "XS",
+          "S",
+          "M",
+          "L"
+        ],
+        "price": "638.000"
+      },
+      "quantity": {
+        "quantity": 1
+      }
+    },
+    {
+      "id": "pw_2",
+      "info": {
+        "baseURL": "./image/Woman/Product_woman_2",
+        "folder": "Product_woman_2",
+        "name": "Chân Váy Jean Nữ Dài Chữ A Túi Đắp Trơn Form A Line",
+        "colorCode": [
+          "rgb(68, 74, 91)"
+        ],
+        "color": [
+          "Jeans xanh đậm"
+        ],
+        "size": [
+          "24",
+          "26",
+          "28",
+          "30"
+        ],
+        "price": "540.000"
+      },
+      "quantity": {
+        "quantity": 1
+      }
+    },
+    {
+      "id": "pw_3",
+      "info": {
+        "baseURL": "./image/Woman/Product_woman_3",
+        "folder": "Product_woman_3",
+        "name": "Chân Váy Midi Nữ Lưng Thun Xếp Ly Trơn Form Aline",
+        "colorCode": [
+          "rgb(125, 83, 37)",
+          "rgb(0, 0, 0)",
+          "rgb(209, 202, 184)"
+        ],
+        "color": [
+          "Nâu",
+          "Đen",
+          "Be"
+        ],
+        "size": [
+          "XS",
+          "S",
+          "M",
+          "L"
+        ],
+        "price": "649.000"
+      },
+      "quantity": {
+        "quantity": 1
+      }
+    },
+    {
+      "id": "pw_4",
+      "info": {
+        "baseURL": "./image/Woman/Product_woman_4",
+        "folder": "Product_woman_4",
+        "name": "Quần Jean Nam Ống Ôm Spandex Co Giãn Form Slim",
+        "colorCode": [
+          "rgb(69, 98, 131)"
+        ],
+        "color": [
+          "Jeans xanh nhạt"
+        ],
+        "size": [
+          "24",
+          "26",
+          "28",
+          "30"
+        ],
+        "price": "479.000"
+      },
+      "quantity": {
+        "quantity": 1
+      }
+    }
+  ],
+  "product_kid_list": [
+    {
+      "id": "pk_1",
+      "info": {
+        "baseURL": "./image/Kid/Product_kid_1",
+        "folder": "Product_kid_1",
+        "name": "Áo Thun Nam Tay Ngắn Cotton Polyester In Hình Form Loose",
+        "colorCode": [
+          "rgb(209, 202, 184)",
+          "rgb(48, 80, 75)"
+        ],
+        "color": [
+          "Be",
+          "Xanh lá"
+        ],
+        "size": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        "price": "441.000"
+      },
+      "quantity": {
+        "quantity": 1
+      }
+    },
+    {
+      "id": "pk_2",
+      "info": {
+        "baseURL": "./image/Kid/Product_kid_2",
+        "folder": "Product_kid_2",
+        "name": "Quần Jean Nam Ống Ôm Xanh Trơn Form Slim",
+        "colorCode": [
+          "rgb(69, 98, 131)"
+        ],
+        "color": [
+          "Jeans xanh nhạt"
+        ],
+        "size": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        "price": "589.000"
+      },
+      "quantity": {
+        "quantity": 1
+      }
+    },
+    {
+      "id": "pk_3",
+      "info": {
+        "baseURL": "./image/Kid/Product_kid_3",
+        "folder": "Product_kid_3",
+        "name": "Áo thun nam tay ngắn fitted",
+        "colorCode": [
+          "rgb(0, 0, 0)",
+          "rgb(206, 206, 206)",
+          "rgb(209, 202, 184)"
+        ],
+        "color": [
+          "Đen",
+          "Trắng",
+          "Be"
+        ],
+        "size": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        "price": "373.000"
+      },
+      "quantity": {
+        "quantity": 1
+      }
+    },
+    {
+      "id": "pk_4",
+      "info": {
+        "baseURL": "./image/Kid/Product_kid_4",
+        "folder": "Product_kid_4",
+        "name": "Quần Jean Nam Ống Ôm Spandex Co Giãn Form Slim",
+        "colorCode": [
+          "rgb(68, 74, 91)"
+        ],
+        "color": [
+          "Jeans xanh đậm"
+        ],
+        "size": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        "price": "589.000"
+      },
+      "quantity": {
+        "quantity": 1
+      }
+    },
+    {
+      "id": "pk_1",
+      "info": {
+        "baseURL": "./image/Kid/Product_kid_1",
+        "folder": "Product_kid_1",
+        "name": "Áo Thun Nam Tay Ngắn Cotton Polyester In Hình Form Loose",
+        "colorCode": [
+          "rgb(209, 202, 184)",
+          "rgb(48, 80, 75)"
+        ],
+        "color": [
+          "Be",
+          "Xanh lá"
+        ],
+        "size": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        "price": "441.000"
+      },
+      "quantity": {
+        "quantity": 1
+      }
+    },
+    {
+      "id": "pk_2",
+      "info": {
+        "baseURL": "./image/Kid/Product_kid_2",
+        "folder": "Product_kid_2",
+        "name": "Quần Jean Nam Ống Ôm Xanh Trơn Form Slim",
+        "colorCode": [
+          "rgb(69, 98, 131)"
+        ],
+        "color": [
+          "Jeans xanh nhạt"
+        ],
+        "size": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        "price": "589.000"
+      },
+      "quantity": {
+        "quantity": 1
+      }
+    },
+    {
+      "id": "pk_3",
+      "info": {
+        "baseURL": "./image/Kid/Product_kid_3",
+        "folder": "Product_kid_3",
+        "name": "Áo thun nam tay ngắn fitted",
+        "colorCode": [
+          "rgb(0, 0, 0)",
+          "rgb(206, 206, 206)",
+          "rgb(209, 202, 184)"
+        ],
+        "color": [
+          "Đen",
+          "Trắng",
+          "Be"
+        ],
+        "size": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        "price": "373.000"
+      },
+      "quantity": {
+        "quantity": 1
+      }
+    },
+    {
+      "id": "pk_4",
+      "info": {
+        "baseURL": "./image/Kid/Product_kid_4",
+        "folder": "Product_kid_4",
+        "name": "Quần Jean Nam Ống Ôm Spandex Co Giãn Form Slim",
+        "colorCode": [
+          "rgb(68, 74, 91)"
+        ],
+        "color": [
+          "Jeans xanh đậm"
+        ],
+        "size": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        "price": "589.000"
+      },
+      "quantity": {
+        "quantity": 1
+      }
+    },
+    {
+      "id": "pk_1",
+      "info": {
+        "baseURL": "./image/Kid/Product_kid_1",
+        "folder": "Product_kid_1",
+        "name": "Áo Thun Nam Tay Ngắn Cotton Polyester In Hình Form Loose",
+        "colorCode": [
+          "rgb(209, 202, 184)",
+          "rgb(48, 80, 75)"
+        ],
+        "color": [
+          "Be",
+          "Xanh lá"
+        ],
+        "size": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        "price": "441.000"
+      },
+      "quantity": {
+        "quantity": 1
+      }
+    },
+    {
+      "id": "pk_2",
+      "info": {
+        "baseURL": "./image/Kid/Product_kid_2",
+        "folder": "Product_kid_2",
+        "name": "Quần Jean Nam Ống Ôm Xanh Trơn Form Slim",
+        "colorCode": [
+          "rgb(69, 98, 131)"
+        ],
+        "color": [
+          "Jeans xanh nhạt"
+        ],
+        "size": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        "price": "589.000"
+      },
+      "quantity": {
+        "quantity": 1
+      }
+    },
+    {
+      "id": "pk_3",
+      "info": {
+        "baseURL": "./image/Kid/Product_kid_3",
+        "folder": "Product_kid_3",
+        "name": "Áo thun nam tay ngắn fitted",
+        "colorCode": [
+          "rgb(0, 0, 0)",
+          "rgb(206, 206, 206)",
+          "rgb(209, 202, 184)"
+        ],
+        "color": [
+          "Đen",
+          "Trắng",
+          "Be"
+        ],
+        "size": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        "price": "373.000"
+      },
+      "quantity": {
+        "quantity": 1
+      }
+    },
+    {
+      "id": "pk_4",
+      "info": {
+        "baseURL": "./image/Kid/Product_kid_4",
+        "folder": "Product_kid_4",
+        "name": "Quần Jean Nam Ống Ôm Spandex Co Giãn Form Slim",
+        "colorCode": [
+          "rgb(68, 74, 91)"
+        ],
+        "color": [
+          "Jeans xanh đậm"
+        ],
+        "size": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        "price": "589.000"
+      },
+      "quantity": {
+        "quantity": 1
+      }
+    }
+  ],
+  "user_account": [
+    {
+      "id": "u1",
+      "status": "Logged",
+      "userName": "Đoàn Như Sơn",
+      "email": "doanson2004@gmail.com",
+      "phoneNumber": "0553217558",
+      "password": "doanson2004",
+      "cart": [
+        {
+          "info": {
+            "baseURL": "./image/Man/Product_man_2",
+            "folder": "Product_man_2",
+            "name": "Quần Jean Nam Ống Ôm Xanh Trơn Form Slim",
+            "color": "Jeans xanh nhạt",
+            "size": "L",
+            "price": "589.000"
+          },
+          "quantity": {
+            "quantity": "3"
+          }
+        },
+        {
+          "info": {
+            "baseURL": "./image/Man/Product_man_3",
+            "folder": "Product_man_3",
+            "name": "Áo thun nam tay ngắn fitted",
+            "color": "Đen",
+            "size": "M",
+            "price": "373.000"
+          },
+          "quantity": {
+            "quantity": "1"
+          }
+        },
+        {
+          "info": {
+            "baseURL": "./image/Woman/Product_woman_3",
+            "folder": "Product_woman_3",
+            "name": "Chân Váy Midi Nữ Lưng Thun Xếp Ly Trơn Form Aline",
+            "color": "Đen",
+            "size": "S",
+            "price": "649.000"
+          },
+          "quantity": {
+            "quantity": "1"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "status": "",
+      "userName": "Đỗ Huy Hoàng",
+      "email": "dohoang2004@gmail.com",
+      "phoneNumber": "0553217559",
+      "password": "dohoang2004",
+      "cart": []
+    },
+    {
+      "id": "u3",
+      "status": "",
+      "userName": "Hoàng Thị Huyền",
+      "email": "hthuyen200x@gmail.com",
+      "phoneNumber": "0553217557",
+      "password": "hthuyen200x",
+      "cart": []
+    },
+    {
+      "id": "u4",
+      "status": "",
+      "userName": "Trần Huyền Trang",
+      "email": "thtrang2004@gmail.com",
+      "phoneNumber": "0553217550",
+      "password": "thtrang2004",
+      "cart": []
+    },
+    {
+      "status": "",
+      "id": "2f51",
+      "userName": "Đoàn  Sơn ",
+      "email": "dnson384@gmail.com",
+      "phoneNumber": "0977629512",
+      "password": "doanson3008",
+      "cart": []
+    }
+  ]
+}

@@ -31,13 +31,13 @@
         <div class="collapse navbar-collapse justify-content-end" id="toggleMobileMenu">
           <ul class="navbar-nav gap-lg-5">
             <li class="nav-item">
-              <a class="nav-link text-white text-center" href="#">Thời trang nam</a>
+              <a class="nav-link text-white text-center product_men_list">Thời trang nam</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white text-center" href="#">Thời trang nữ</a>
+              <a class="nav-link text-white text-center product_women_list" href="#">Thời trang nữ</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white text-center" href="#">Thời trang trẻ em</a>
+              <a class="nav-link text-white text-center product_kid_list" href="#">Thời trang trẻ em</a>
             </li>
           </ul>
         </div>
@@ -62,8 +62,8 @@
               <a class="nav-link text-white text-center d-lg-none" href="#">Tìm kiếm</a>
             </li>
             <!-- Tài khoản -->
-            <li class="nav-item">
-              <a class="nav-link text-white text-center d-none d-lg-block" data-bs-toggle="modal" data-bs-target="#loginModal" href="#">
+            <li class="nav-item log-icon">
+              <a class="nav-link text-white text-center d-none d-lg-block" data-bs-toggle="modal" data-bs-target="#loginModal" id="accountLink" href="#">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g clip-path="url(#clip0_67_64)">
                   <path d="M12 12C15.077 12 17.5714 9.50559 17.5714 6.42858C17.5714 3.35156 15.077 0.857147 12 0.857147C8.92297 0.857147 6.42856 3.35156 6.42856 6.42858C6.42856 9.50559 8.92297 12 12 12Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -132,27 +132,7 @@
           <!-- Chọn size -->
           <div class="select-size">
             <h5 class="text-primary">Chọn size</h5>
-            <div class="d-flex gap-3">
-              <button class="btn border text-primary">S</button>
-              <button class="btn border text-primary">M</button>
-              <button class="btn border text-primary">L</button>
-              <button class="btn border text-primary">XL</button>
-            </div>
-            <div class="d-flex gap-3">
-              <button class="btn border text-primary">XS</button>
-              <button class="btn border text-primary">S</button>
-              <button class="btn border text-primary">M</button>
-              <button class="btn border text-primary">L</button>
-            </div>
-            <div class="d-flex gap-3">
-              <button class="btn border text-primary">98</button>
-              <button class="btn border text-primary">104</button>
-              <button class="btn border text-primary">110</button>
-              <button class="btn border text-primary">116</button>
-              <button class="btn border text-primary">116</button>
-              <button class="btn border text-primary">116</button>
-              <button class="btn border text-primary">134</button>
-            </div>
+            <div class="d-flex gap-3 option-size"></div>
           </div>
           <!-- Sô lượng -->
           <div class="add-quantity">
@@ -207,7 +187,26 @@
     </div>
   </div>
 
+  
 
+  <!-- Đăng xuất -->
+  <div class="modal fade" id="logoutModal" tabindex="-1" aria-labelledby="logoutModal" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Đăng xuất</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Bạn có muốn đăng xuất không?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Huỷ</button>
+          <button type="button" class="btn btn-primary logout-btn">Đăng xuất</button>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- Đăng nhập -->
   <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModal" aria-hidden="true"> 
     <div class="modal-dialog">
@@ -269,8 +268,8 @@
         <div class="modal-body d-flex flex-column gap-3">  
           <div class="form-search w-100 d-flex align-items-center justify-content-center p-4 gap-lg-5">
             <div class="d-flex gap-2 border border-1 border-primary rounded-pill px-3 col-xl-6 col-md-8 col">
-              <input type="text" class="form-control bg-white border-0 text-primary" placeholder="Tìm kiếm sản phẩm...">
-              <button type="button" class="btn btn-search">
+              <input type="text"  id="search-input" class="form-control bg-white border-0 text-primary" placeholder="Tìm kiếm sản phẩm...">
+              <button type="button" class="btn" id="search-btn">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g clip-path="url(#clip0_76_23)">
                   <path d="M10.1486 19.44C15.2801 19.44 19.44 15.2801 19.44 10.1486C19.44 5.01706 15.2801 0.857147 10.1486 0.857147C5.01706 0.857147 0.857147 5.01706 0.857147 10.1486C0.857147 15.2801 5.01706 19.44 10.1486 19.44Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -325,7 +324,6 @@
 
   <!-- Script -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script type="module" src="./script.js"></script>
   <script type="module" src="./func.js"></script>
   <script type="module" src="./detail.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
