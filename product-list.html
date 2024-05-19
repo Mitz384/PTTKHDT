@@ -21,7 +21,7 @@
     <nav class="navbar navbar-expand-lg pt-0 pb-0 bg-primary">
       <div class="container-md px-0">
         <div class="logo">
-          <a class="navbar-brand ff-RacingSansOne fs-3 text-white" id="logo-detail" style="cursor: pointer;">Clothes<br/>Store</a>
+          <a class="navbar-brand ff-RacingSansOne fs-3 text-white" href="./index.html" style="cursor: pointer;">Clothes<br/>Store</a>
         </div>
         
         <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#toggleMobileMenu" aria-controls="toggleMobileMenu" aria-expanded="false" aria-label="Toggle navigation">
@@ -196,7 +196,7 @@
         <div class="modal-body d-flex flex-column align-items-center justify-content-center p-5 gap-3">
           <h1 class="text-primary">Sign up</h1>
           <!-- Form login -->
-          <div class="login-form d-flex flex-column gap-2 w-100">
+          <div class="sign-up-form d-flex flex-column gap-2 w-100">
             <div class="name-input d-flex gap-4">
               <input type="text" class="form-control bg-white border-0 border-bottom border-1 border-primary rounded-0 text-primary" placeholder="Họ">
               <input type="text" class="form-control bg-white border-0 border-bottom border-1 border-primary rounded-0 text-primary" placeholder="Tên">
@@ -205,8 +205,9 @@
             <input type="text" class="form-control bg-white border-0 border-bottom border-1 border-primary rounded-0 text-primary" placeholder="Số điện thoại">
             <input type="password" class="form-control bg-white border-0 border-bottom border-1 border-primary rounded-0 text-primary" placeholder="Password">
             <div class="d-flex gap-2">
-              <input type="text" class="form-control bg-white border-0 border-bottom border-1 border-primary rounded-0 text-primary" placeholder="Nhập mã OTP">
-              <button class="btn border border-1 border-primary col-3 btn-outline-primary">Gửi OTP</button>
+              <input type="text" class="form-control bg-white border-0 border-bottom border-1 border-primary rounded-0 text-primary OTP-input" placeholder="Nhập mã OTP">
+              <button class="btn border border-1 border-primary col-3 btn-outline-primary send-otp-btn">Gửi OTP</button>
+              <button class="btn border border-1 border-primary col-3 btn-outline-primary confirm-otp-btn hidden">Xác nhận OTP</button>
             </div>
             <div class="autologin">
               <input type="checkbox" class="input-checkbox border-0" id="accept-condition">
@@ -214,7 +215,7 @@
             </div>
           </div>
           <!-- Login button -->
-          <button class="login-btn btn bg-primary text-white w-100 fw-medium">Đăng ký</button>
+          <button class="sign-up-btn btn bg-primary text-white w-100 fw-medium">Đăng ký</button>
           <p href="">Bạn đã có tài khoản?  <span><a href="" data-bs-toggle="modal" data-bs-target="#loginModal">Đăng nhập</a></span></p>
         </div>
       </div>
@@ -273,7 +274,7 @@
         <!-- Thành tiền và đặt hàng -->
         <div class="modal-footer d-flex align-items-center justify-content-between">
           <div class="total-price"></div>
-          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Thanh toán</button>
+          <button type="button" class="btn btn-primary payment-btn" data-bs-dismiss="modal">Thanh toán</button>
         </div>
       </div>
     </div>

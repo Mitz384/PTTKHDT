@@ -1,17 +1,6 @@
 import * as func from './func.js'
 
 
-document.querySelector('#logo-detail').addEventListener('click', () => {
-  if(func.checkLoggedIn()){
-    window.location.href = './loggedin.html';
-  }
-  else{
-    window.location.href = './index.html';
-  }
-})
-
-
-
 // Đăng xuất đăng nhập
 const isLogin = func.checkLoggedIn();
 console.log(isLogin);
@@ -81,3 +70,24 @@ fetch(accountAPI)
     const user = users.find(user => user.status == "Logged");
     func.printCart(user.cart);
     })
+
+$('.payment-btn').click(() => {
+  fetch('http://localhost:3000/user_account')
+    .then(response => response.json())
+    .then(users => {
+      const user = users.find(u => u.status == "Logged");
+      if(user){
+        let cart = [];
+        for(let i = 0; i < user.cart.length; i++){
+          if($(`#select-prod_${i+1}`).is(":checked")){
+            cart.push(user.cart[i]);
+          }
+        }
+        sessionStorage.setItem('cart_pay', JSON.stringify(cart));
+        window.location.href = './payment.html';
+      }
+      else{
+        alert('Bạn cần đăng nhập để thanh toán!');
+      }
+    })
+})

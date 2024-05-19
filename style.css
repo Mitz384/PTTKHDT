@@ -47,6 +47,7 @@ nav{
 }
 .banner{
   max-width: 100% !important;
+  max-height: 30%;
 }
 /* Login */
 .login-modal{

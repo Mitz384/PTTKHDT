@@ -390,7 +390,7 @@
       "info": {
         "baseURL": "./image/Woman/Product_woman_4",
         "folder": "Product_woman_4",
-        "name": "Quần Jean Nam Ống Ôm Spandex Co Giãn Form Slim",
+        "name": "Chân Váy Chữ A Jean Nữ Họa Tiết In Laser Form A Line",
         "colorCode": [
           "rgb(69, 98, 131)"
         ],
@@ -616,22 +616,23 @@
       "info": {
         "baseURL": "./image/Kid/Product_kid_1",
         "folder": "Product_kid_1",
-        "name": "Áo Thun Nam Tay Ngắn Cotton Polyester In Hình Form Loose",
+        "name": "Quần soóc bé trai cạp chun",
         "colorCode": [
-          "rgb(209, 202, 184)",
+          "rgb(0, 0, 0)",
+          "rgb(206, 206, 206)",
           "rgb(48, 80, 75)"
         ],
         "color": [
-          "Be",
+          "Trắng",
           "Xanh lá"
         ],
         "size": [
-          "S",
-          "M",
-          "L",
-          "XL"
+          "100",
+          "110",
+          "120",
+          "130"
         ],
-        "price": "441.000"
+        "price": "169.000"
       },
       "quantity": {
         "quantity": 1
@@ -642,18 +643,20 @@
       "info": {
         "baseURL": "./image/Kid/Product_kid_2",
         "folder": "Product_kid_2",
-        "name": "Quần Jean Nam Ống Ôm Xanh Trơn Form Slim",
+        "name": "Bộ mặc nhà bé gái cotton cộc tay quần soóc",
         "colorCode": [
-          "rgb(69, 98, 131)"
+          "rgb(200,172,216)",
+          "rgb(246,217,229)"
         ],
         "color": [
-          "Jeans xanh nhạt"
+          "Tím",
+          "Hồng"
         ],
         "size": [
-          "S",
-          "M",
-          "L",
-          "XL"
+          "98",
+          "104",
+          "110",
+          "116"
         ],
         "price": "589.000"
       },
@@ -666,48 +669,22 @@
       "info": {
         "baseURL": "./image/Kid/Product_kid_3",
         "folder": "Product_kid_3",
-        "name": "Áo thun nam tay ngắn fitted",
+        "name": "Bộ mặc nhà bé gái cotton cộc tay quần soóc viền bèo",
         "colorCode": [
-          "rgb(0, 0, 0)",
-          "rgb(206, 206, 206)",
-          "rgb(209, 202, 184)"
+          "rgb(246,217,229)",
+          "rgb(200,172,216)"
         ],
         "color": [
-          "Đen",
-          "Trắng",
-          "Be"
+          "Hồng",
+          "Tím"
         ],
         "size": [
-          "S",
-          "M",
-          "L",
-          "XL"
+          "98",
+          "104",
+          "110",
+          "116"
         ],
         "price": "373.000"
-      },
-      "quantity": {
-        "quantity": 1
-      }
-    },
-    {
-      "id": "pk_4",
-      "info": {
-        "baseURL": "./image/Kid/Product_kid_4",
-        "folder": "Product_kid_4",
-        "name": "Quần Jean Nam Ống Ôm Spandex Co Giãn Form Slim",
-        "colorCode": [
-          "rgb(68, 74, 91)"
-        ],
-        "color": [
-          "Jeans xanh đậm"
-        ],
-        "size": [
-          "S",
-          "M",
-          "L",
-          "XL"
-        ],
-        "price": "589.000"
       },
       "quantity": {
         "quantity": 1
@@ -718,22 +695,23 @@
       "info": {
         "baseURL": "./image/Kid/Product_kid_1",
         "folder": "Product_kid_1",
-        "name": "Áo Thun Nam Tay Ngắn Cotton Polyester In Hình Form Loose",
+        "name": "Quần soóc bé trai cạp chun",
         "colorCode": [
-          "rgb(209, 202, 184)",
+          "rgb(0, 0, 0)",
+          "rgb(206, 206, 206)",
           "rgb(48, 80, 75)"
         ],
         "color": [
-          "Be",
+          "Trắng",
           "Xanh lá"
         ],
         "size": [
-          "S",
-          "M",
-          "L",
-          "XL"
+          "100",
+          "110",
+          "120",
+          "130"
         ],
-        "price": "441.000"
+        "price": "169.000"
       },
       "quantity": {
         "quantity": 1
@@ -744,18 +722,20 @@
       "info": {
         "baseURL": "./image/Kid/Product_kid_2",
         "folder": "Product_kid_2",
-        "name": "Quần Jean Nam Ống Ôm Xanh Trơn Form Slim",
+        "name": "Bộ mặc nhà bé gái cotton cộc tay quần soóc",
         "colorCode": [
-          "rgb(69, 98, 131)"
+          "rgb(200,172,216)",
+          "rgb(246,217,229)"
         ],
         "color": [
-          "Jeans xanh nhạt"
+          "Tím",
+          "Hồng"
         ],
         "size": [
-          "S",
-          "M",
-          "L",
-          "XL"
+          "98",
+          "104",
+          "110",
+          "116"
         ],
         "price": "589.000"
       },
@@ -768,48 +748,22 @@
       "info": {
         "baseURL": "./image/Kid/Product_kid_3",
         "folder": "Product_kid_3",
-        "name": "Áo thun nam tay ngắn fitted",
+        "name": "Bộ mặc nhà bé gái cotton cộc tay quần soóc viền bèo",
         "colorCode": [
-          "rgb(0, 0, 0)",
-          "rgb(206, 206, 206)",
-          "rgb(209, 202, 184)"
+          "rgb(246,217,229)",
+          "rgb(200,172,216)"
         ],
         "color": [
-          "Đen",
-          "Trắng",
-          "Be"
+          "Hồng",
+          "Tím"
         ],
         "size": [
-          "S",
-          "M",
-          "L",
-          "XL"
+          "98",
+          "104",
+          "110",
+          "116"
         ],
         "price": "373.000"
-      },
-      "quantity": {
-        "quantity": 1
-      }
-    },
-    {
-      "id": "pk_4",
-      "info": {
-        "baseURL": "./image/Kid/Product_kid_4",
-        "folder": "Product_kid_4",
-        "name": "Quần Jean Nam Ống Ôm Spandex Co Giãn Form Slim",
-        "colorCode": [
-          "rgb(68, 74, 91)"
-        ],
-        "color": [
-          "Jeans xanh đậm"
-        ],
-        "size": [
-          "S",
-          "M",
-          "L",
-          "XL"
-        ],
-        "price": "589.000"
       },
       "quantity": {
         "quantity": 1
@@ -820,22 +774,23 @@
       "info": {
         "baseURL": "./image/Kid/Product_kid_1",
         "folder": "Product_kid_1",
-        "name": "Áo Thun Nam Tay Ngắn Cotton Polyester In Hình Form Loose",
+        "name": "Quần soóc bé trai cạp chun",
         "colorCode": [
-          "rgb(209, 202, 184)",
+          "rgb(0, 0, 0)",
+          "rgb(206, 206, 206)",
           "rgb(48, 80, 75)"
         ],
         "color": [
-          "Be",
+          "Trắng",
           "Xanh lá"
         ],
         "size": [
-          "S",
-          "M",
-          "L",
-          "XL"
+          "100",
+          "110",
+          "120",
+          "130"
         ],
-        "price": "441.000"
+        "price": "169.000"
       },
       "quantity": {
         "quantity": 1
@@ -846,18 +801,20 @@
       "info": {
         "baseURL": "./image/Kid/Product_kid_2",
         "folder": "Product_kid_2",
-        "name": "Quần Jean Nam Ống Ôm Xanh Trơn Form Slim",
+        "name": "Bộ mặc nhà bé gái cotton cộc tay quần soóc",
         "colorCode": [
-          "rgb(69, 98, 131)"
+          "rgb(200,172,216)",
+          "rgb(246,217,229)"
         ],
         "color": [
-          "Jeans xanh nhạt"
+          "Tím",
+          "Hồng"
         ],
         "size": [
-          "S",
-          "M",
-          "L",
-          "XL"
+          "98",
+          "104",
+          "110",
+          "116"
         ],
         "price": "589.000"
       },
@@ -870,22 +827,20 @@
       "info": {
         "baseURL": "./image/Kid/Product_kid_3",
         "folder": "Product_kid_3",
-        "name": "Áo thun nam tay ngắn fitted",
+        "name": "Bộ mặc nhà bé gái cotton cộc tay quần soóc viền bèo",
         "colorCode": [
-          "rgb(0, 0, 0)",
-          "rgb(206, 206, 206)",
-          "rgb(209, 202, 184)"
+          "rgb(246,217,229)",
+          "rgb(200,172,216)"
         ],
         "color": [
-          "Đen",
-          "Trắng",
-          "Be"
+          "Hồng",
+          "Tím"
         ],
         "size": [
-          "S",
-          "M",
-          "L",
-          "XL"
+          "98",
+          "104",
+          "110",
+          "116"
         ],
         "price": "373.000"
       },
@@ -894,24 +849,79 @@
       }
     },
     {
-      "id": "pk_4",
+      "id": "pk_1",
       "info": {
-        "baseURL": "./image/Kid/Product_kid_4",
-        "folder": "Product_kid_4",
-        "name": "Quần Jean Nam Ống Ôm Spandex Co Giãn Form Slim",
+        "baseURL": "./image/Kid/Product_kid_1",
+        "folder": "Product_kid_1",
+        "name": "Quần soóc bé trai cạp chun",
         "colorCode": [
-          "rgb(68, 74, 91)"
+          "rgb(0, 0, 0)",
+          "rgb(206, 206, 206)",
+          "rgb(48, 80, 75)"
         ],
         "color": [
-          "Jeans xanh đậm"
+          "Trắng",
+          "Xanh lá"
         ],
         "size": [
-          "S",
-          "M",
-          "L",
-          "XL"
+          "100",
+          "110",
+          "120",
+          "130"
+        ],
+        "price": "169.000"
+      },
+      "quantity": {
+        "quantity": 1
+      }
+    },
+    {
+      "id": "pk_2",
+      "info": {
+        "baseURL": "./image/Kid/Product_kid_2",
+        "folder": "Product_kid_2",
+        "name": "Bộ mặc nhà bé gái cotton cộc tay quần soóc",
+        "colorCode": [
+          "rgb(200,172,216)",
+          "rgb(246,217,229)"
+        ],
+        "color": [
+          "Tím",
+          "Hồng"
+        ],
+        "size": [
+          "98",
+          "104",
+          "110",
+          "116"
         ],
         "price": "589.000"
+      },
+      "quantity": {
+        "quantity": 1
+      }
+    },
+    {
+      "id": "pk_3",
+      "info": {
+        "baseURL": "./image/Kid/Product_kid_3",
+        "folder": "Product_kid_3",
+        "name": "Bộ mặc nhà bé gái cotton cộc tay quần soóc viền bèo",
+        "colorCode": [
+          "rgb(246,217,229)",
+          "rgb(200,172,216)"
+        ],
+        "color": [
+          "Hồng",
+          "Tím"
+        ],
+        "size": [
+          "98",
+          "104",
+          "110",
+          "116"
+        ],
+        "price": "373.000"
       },
       "quantity": {
         "quantity": 1
@@ -921,7 +931,7 @@
   "user_account": [
     {
       "id": "u1",
-      "status": "Logged",
+      "status": "",
       "userName": "Đoàn Như Sơn",
       "email": "doanson2004@gmail.com",
       "phoneNumber": "0553217558",
@@ -929,25 +939,12 @@
       "cart": [
         {
           "info": {
-            "baseURL": "./image/Man/Product_man_2",
-            "folder": "Product_man_2",
-            "name": "Quần Jean Nam Ống Ôm Xanh Trơn Form Slim",
-            "color": "Jeans xanh nhạt",
-            "size": "L",
-            "price": "589.000"
-          },
-          "quantity": {
-            "quantity": "3"
-          }
-        },
-        {
-          "info": {
-            "baseURL": "./image/Man/Product_man_3",
-            "folder": "Product_man_3",
-            "name": "Áo thun nam tay ngắn fitted",
-            "color": "Đen",
+            "baseURL": "./image/Man/Product_man_1",
+            "folder": "Product_man_1",
+            "name": "Áo Thun Nam Tay Ngắn Cotton Polyester In Hình Form Loose",
+            "color": "Xanh lá",
             "size": "M",
-            "price": "373.000"
+            "price": "441.000"
           },
           "quantity": {
             "quantity": "1"
@@ -955,12 +952,12 @@
         },
         {
           "info": {
-            "baseURL": "./image/Woman/Product_woman_3",
-            "folder": "Product_woman_3",
-            "name": "Chân Váy Midi Nữ Lưng Thun Xếp Ly Trơn Form Aline",
-            "color": "Đen",
+            "baseURL": "./image/Man/Product_man_2",
+            "folder": "Product_man_2",
+            "name": "Quần Jean Nam Ống Ôm Xanh Trơn Form Slim",
+            "color": "Jeans xanh nhạt",
             "size": "S",
-            "price": "649.000"
+            "price": "589.000"
           },
           "quantity": {
             "quantity": "1"
@@ -1003,6 +1000,50 @@
       "phoneNumber": "0977629512",
       "password": "doanson3008",
       "cart": []
+    },
+    {
+      "id": "dd4c",
+      "userName": "tran trang",
+      "email": "thanglong1@gmail.com",
+      "phoneNumber": "0987656789",
+      "password": "thanglong1",
+      "cart": [
+        {
+          "info": {
+            "baseURL": "./image/Man/Product_man_8",
+            "folder": "Product_man_8",
+            "name": "Áo Polo Nam Tay Ngắn Cotton Thêu Chữ Form Boxy",
+            "color": "Trắng",
+            "size": "XS",
+            "price": "490.000"
+          },
+          "quantity": {
+            "quantity": "2"
+          }
+        }
+      ],
+      "status": ""
+    },
+    {
+      "id": "a042",
+      "status": ""
+    },
+    {
+      "id": "4875",
+      "status": ""
+    },
+    {
+      "id": "a72d",
+      "status": ""
+    },
+    {
+      "id": "54fe",
+      "userName": "Đỗ Hoàng",
+      "email": "harungusi@gmail.com",
+      "phoneNumber": "0123456987",
+      "password": "harungusi123",
+      "cart": [],
+      "status": "Logged"
     }
   ]
 }

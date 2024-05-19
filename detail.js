@@ -1,25 +1,15 @@
 import * as func from './func.js';
 
-// Các option ảnh sản phẩm
+// ------------------------------Các option ảnh sản phẩm----------------------
 function img(imageURL){
   document.querySelector(".slide").src = imageURL;
 }
-
-// Hành vi của logo
-
-document.querySelector('#logo-detail').addEventListener('click', () => {
-  if(func.checkLoggedIn()){
-    window.location.href = './loggedin.html';
-  }
-  else{
-    window.location.href = './index.html';
-  }
-})
 
 
 // ---------------------Thông tin sản phẩm--------------------
 const product_info = JSON.parse(localStorage.getItem('selectedProduct'));
 // Ảnh chính
+console.log(product_info);
 $('.prod-main-image').attr('src', `${product_info.info.baseURL}/${product_info.info.folder}_1.png`);
 // Option ảnh
 const optionImage = $('.option-image');
@@ -103,7 +93,6 @@ colorButton.forEach((color) => {
 })
 
 
-
 // --------------------Thay đổi size-----------------------------
 let sizeButton = document.querySelectorAll('.select-size button');
 let sizeShow = document.querySelector('.select-size h5');
@@ -157,16 +146,23 @@ quantityInput.addEventListener('change', () => {
   quantityShow.textContent = 'Số lượng: ' + quantityInput.value;
   quantity.quantity = quantityInput.value;
 });
+
+
 let quantity = {quantity: quantityInput.value}
 
-// -----------------Thêm sản phẩm vào giỏ hàng-----------------
 
+
+// -----------------Thêm sản phẩm vào giỏ hàng-----------------
 document.querySelector('.add-to-cart-btn').addEventListener('click', () => {
   const userAPI = 'http://localhost:3000/user_account';
   fetch(userAPI)
     .then(response => response.json())
     .then(users => {
       const user = users.find(user => user.status == "Logged");
+      if(!user){
+        alert("Ban can dang nhap de them san pham vo gio hang!");
+        return;
+      }
       if(info.color == '' || info.size == ''){
         alert('Chưa chọn thuộc tính sản phẩm!');
       }
@@ -189,7 +185,8 @@ document.querySelector('.add-to-cart-btn').addEventListener('click', () => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({ cart: user.cart }),
-      })
+        })
+        alert("Đã thêm sản phẩm vào giỏ hàng!");
       }
     })
 })
@@ -202,19 +199,31 @@ fetch(accountAPI)
     func.printCart(user.cart);
     })
 
-// Tìm kiếm
+
+
+// ---------------------------Tìm kiếm-------------------------------------
 document.getElementById('search-btn').addEventListener('click', function(){
-  func.searchProduct();
+  const valueSearch = document.getElementById('search-input').value;
+  sessionStorage.setItem("valueSearch", valueSearch);
+  window.location.href = './search.html';
 })
 
 
-// Đăng xuất đăng nhập
+
+
+// --------------------------Đăng xuất đăng nhập---------------------------
 const isLogin = func.checkLoggedIn();
 console.log(isLogin);
 const accountLink = document.getElementById('accountLink');
 if (isLogin) {
   accountLink.setAttribute('data-bs-target', '#logoutModal')
 }
+fetch('http://localhost:3000/user_account')
+  .then(response => response.json())
+  .then(users => {
+    const user = users.find(u => u.status == "Logged");
+    console.log(user);
+  })
 // Đăng nhập
 $('.login-btn').click(() => {
   if(func.logIn() == true){
@@ -228,10 +237,10 @@ $('.confirm-otp-btn').click(() => {
 });
 $('.sign-up-btn').click(() => func.signUp());
 // Dăng xuất
-$('.logout-btn').click(() => func.logOut());;
+$('.logout-btn').click(() => func.logOut());
 
 
-// Click menu
+// -------------------------Click menu--------------------
 $('.product_men_list').click(() => {
   sessionStorage.setItem("className", 'product_men_list');
   window.location.href = './product-list.html';
@@ -245,9 +254,24 @@ $('.product_kid_list').click(() => {
   window.location.href = './product-list.html';
 })
 
-fetch('http://localhost:3000/user_account')
-  .then(response => response.json())
-  .then(users => {
-    const user = users.find(user => user.status == "Logged");
-    console.log(user);
-  })
+
+$('.payment-btn').click(() => {
+  fetch('http://localhost:3000/user_account')
+    .then(response => response.json())
+    .then(users => {
+      const user = users.find(u => u.status == "Logged");
+      if(user){
+        let cart = [];
+        for(let i = 0; i < user.cart.length; i++){
+          if($(`#select-prod_${i+1}`).is(":checked")){
+            cart.push(user.cart[i]);
+          }
+        }
+        sessionStorage.setItem('cart_pay', JSON.stringify(cart));
+        window.location.href = './payment.html';
+      }
+      else{
+        alert('Bạn cần đăng nhập để thanh toán!');
+      }
+    })
+})
